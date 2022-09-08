@@ -79,7 +79,6 @@ const Subscription = () => {
       return setSubmitting(false);
     }
   };
-
   return (
     <>
       <Container>
@@ -124,7 +123,6 @@ const Subscription = () => {
           </form>
         </motion.div>
       </Container>
-      {console.log(note.note)}
     </>
   );
 };
