@@ -8,32 +8,13 @@
   height: 200px;
   margin: 20px;
   padding: 10px 15px;
+  text-align: center;
   border-radius: 20px;
 }
 
 .roadCardTop {
   font-size: 18px;
   font-weight: 800;
-}
-
-.roadOverlay {
-  position: absolute;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 1%,
-    rgba(255, 255, 255, 0) 2%,
-    rgba(255, 255, 255, 0) 77%,
-    rgba(255, 255, 255, 1) 88%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  overflow: visible;
-  pointer-events: none;
-  width: 100%;
-  height: 35vh;
-  margin: 0 -30px;
-  z-index: 5;
 }
 
 .roadHeaderContainer {
@@ -48,6 +29,8 @@
 
 .roadCardBottom > li {
   font-size: 14px;
+  text-align: left;
+  margin-left: 40px;
 }
 
 .roadmapBtns {
@@ -89,17 +72,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .roadOverlay {
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 1) 1%,
-      rgba(255, 255, 255, 0) 2%,
-      rgba(255, 255, 255, 0) 84%,
-      rgba(255, 255, 255, 0.5) 92%,
-      rgba(255, 255, 255, 1) 100%
-    );
   }
 }
 

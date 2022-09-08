@@ -56,14 +56,16 @@ function Team() {
         <h2 className="roadHeaderContainer" id="team">
           Team
         </h2>
-        <div className="roadOverlay"></div>
 
         <Container className="team-members-lg">
           {teamData.map((item) => (
             <div className="advisors-members">
               <div className="members">
                 <div className="members-images">
-                  <img src={item.img} alt="Profile" />
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    <img src={item.img} alt="Profile" />
+                  </a>
+
                   <a
                     href={item.link}
                     target="_blank"
@@ -89,7 +91,14 @@ function Team() {
               <div ref={sliderRef} className="advisors-members">
                 <div className="members">
                   <div className="members-images">
-                    <img src={item.img} alt="Profile" />
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={item.img} alt="Profile" />
+                    </a>
+
                     <a
                       href={item.link}
                       target="_blank"
@@ -109,27 +118,6 @@ function Team() {
               </div>
             ))}
           </Slider>
-
-          {/* <ButtonGroup className="roadmapBtns">
-            <Button
-              className="arrowBtnContainer"
-              onClick={() => sliderRef.current.slickPrev()}
-            >
-              <div className="arrowBtn">
-                <span className="join" />
-                <img src="assets/prevArrowIcon.svg" alt="arrow" />
-              </div>
-            </Button>
-            <Button
-              className="arrowBtnContainer"
-              onClick={() => sliderRef.current.slickNext()}
-            >
-              <div className="arrowBtn">
-                <span className="join" />
-                <img src="assets/nextArrowIcon.svg" alt="arrow" />
-              </div>
-            </Button>
-          </ButtonGroup> */}
         </Container>
       </Container>
     </>

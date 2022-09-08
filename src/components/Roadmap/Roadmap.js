@@ -58,7 +58,6 @@ function Roadmap() {
     <>
       <Container>
         <h2 className="roadHeaderContainer">Roadmap</h2>
-        <div className="roadOverlay"></div>
 
         <Slider ref={sliderRef} {...settings}>
           {roadmapData.map((item) => (

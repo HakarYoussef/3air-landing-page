@@ -92,15 +92,7 @@ const Subscription = () => {
       <Container>
         <div className="topHrLine" />
 
-        <motion.div
-          className="subContainer"
-          initial={{ y: 75, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{
-            staggerChildren: 0.5,
-          }}
-        >
+        <div className="subContainer">
           <h1>Register now to stay up-to-date!</h1>
           <form id="newsletter" onSubmit={subscribe}>
             <InputGroup>
@@ -139,7 +131,7 @@ const Subscription = () => {
               />
             </InputGroup>
           </form>
-        </motion.div>
+        </div>
       </Container>
     </>
   );

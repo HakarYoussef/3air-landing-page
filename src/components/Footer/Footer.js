@@ -95,13 +95,14 @@ function Footer() {
                     <img src="./assets/twitter.svg" alt="twitter" />
                   </a>
                 </Col>
+
                 <Col xl={3} lg={3} md={3} sm={3} xs={3} className="firstsocial">
                   <a
-                    href="https://www.instagram.com/3air.crypto/"
+                    href="https://t.me/my3air/"
                     target={'_blank'}
                     rel="noopener noreferrer"
                   >
-                    <img src="./assets/instagram.svg" alt="instagram" />
+                    <img src="./assets/telegram.svg" alt="telegram" />
                   </a>
                 </Col>
                 <Col xl={3} lg={3} md={3} sm={3} xs={3} className="firstsocial">
@@ -164,11 +165,11 @@ function Footer() {
                   className="secondsocial"
                 >
                   <a
-                    href="https://t.me/my3air/"
+                    href="https://www.instagram.com/3air.crypto/"
                     target={'_blank'}
                     rel="noopener noreferrer"
                   >
-                    <img src="./assets/telegram.svg" alt="telegram" />
+                    <img src="./assets/instagram.svg" alt="instagram" />
                   </a>
                 </Col>
                 <Col
