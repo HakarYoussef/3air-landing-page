@@ -1,14 +1,8 @@
 import React, { useRef } from 'react';
 import './Team.scss';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Member from '../MembersProfile/Member';
-import { motion } from 'framer-motion';
 import Slider from 'react-slick';
 import { teamData } from './data';
-import Button from 'react-bootstrap/esm/Button';
-import ButtonGroup from 'react-bootstrap/esm/ButtonGroup';
 
 function Team() {
   const sliderRef = useRef(null);

@@ -8,10 +8,10 @@ function Architecture() {
       <Container className="archContainer">
         <h2>Architecture</h2>
       </Container>
-      <Container fluid className='archMain'>
-        <Container fluid className='archInner'>
-          <div className='archImage'>
-              <img src="./assets/architectureImg.svg" alt='Architecture'/>
+      <Container fluid className="archMain">
+        <Container fluid className="archInner">
+          <div className="archImage">
+            <img src="./assets/architectureImg.png" alt="Architecture" />
           </div>
         </Container>
       </Container>
