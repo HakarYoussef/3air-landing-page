@@ -106,6 +106,7 @@ const Subscription = () => {
           <form id="newsletter" onSubmit={subscribe}>
             <InputGroup>
               <Reaptcha
+                className="subscribe-captcha-container"
                 ref={recaptchaRef}
                 size="invisible"
                 sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"

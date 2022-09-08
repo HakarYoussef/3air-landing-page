@@ -92,6 +92,10 @@
   right: -270px !important;
 }
 
+.subscribe-captcha-container {
+  visibility: hidden;
+}
+
 @media only screen and (max-width: 1080px) {
   .input-group {
     width: 90%;
