@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+// import ReCAPTCHA from 'react-google-recaptcha';
+import Reaptcha from 'reaptcha';
 import './SubscriptionStyles.scss';
 import Container from 'react-bootstrap/esm/Container';
 import Button from 'react-bootstrap/Button';
@@ -15,26 +16,11 @@ const Subscription = () => {
     status: '',
   });
 
-  const recaptchaRef = React.createRef();
+  const recaptchaRef = React.useRef();
 
-  const subscribe = async (e) => {
-    e.preventDefault();
-    setSubmitting(true);
-    setNote({
-      note: '',
-      status: '',
-    });
+  const onVerify = async (recaptchaResponse) => {
+    const token = recaptchaResponse;
 
-    const regex = new RegExp(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,7})+$/);
-    if (!regex.test(email)) {
-      setNote({
-        note: 'Email error. Please enter a valid email and try again.',
-        status: 'error',
-      });
-      return setSubmitting(false);
-    }
-
-    const token = await recaptchaRef.current.executeAsync();
     if (!token) {
       setNote({
         note: 'Something went wrong. Please try again.',
@@ -79,6 +65,29 @@ const Subscription = () => {
       return setSubmitting(false);
     }
   };
+
+  const subscribe = async (e) => {
+    console.log('subscribe clicked');
+    e.preventDefault();
+    setSubmitting(true);
+    setNote({
+      note: '',
+      status: '',
+    });
+
+    const regex = new RegExp(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,7})+$/);
+    if (!regex.test(email)) {
+      setNote({
+        note: 'Email error. Please enter a valid email and try again.',
+        status: 'error',
+      });
+      return setSubmitting(false);
+    }
+    console.log('correct email type');
+    console.log(recaptchaRef);
+    recaptchaRef.current.execute();
+
+  };
   return (
     <>
       <Container>
@@ -96,10 +105,11 @@ const Subscription = () => {
           <h1>Register now to stay up-to-date!</h1>
           <form id="newsletter" onSubmit={subscribe}>
             <InputGroup>
-              <ReCAPTCHA
+              <Reaptcha
                 ref={recaptchaRef}
                 size="invisible"
-                sitekey="6LcizmgfAAAAAAVBwAhBOTdchzmVJVkKR58dKp70"
+                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                onVerify={onVerify}
               />
               <Form.Control
                 placeholder="Email"
