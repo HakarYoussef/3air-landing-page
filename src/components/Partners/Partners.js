@@ -20,7 +20,7 @@ function Partners() {
         </h2>
 
         <Container className="logosContainer">
-          <img height={36} src="./assets/icea.svg" alt="Partners" />
+          <img height={36} src="./assets/iceaddis.svg" alt="Partners" />
 
           <img height={24} src="./assets/it.png" alt="Partners" />
 

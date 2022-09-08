@@ -82,8 +82,6 @@ export const advisorsData = [
     name: 'Adedayo Adebajo',
     desc: ['MD at Jelurida Africa, Blockchain Advisor'],
     img: ['./assets/adedayo.svg'],
-    link: [
-      'https://www.linkedin.com/in/adedayo-adebajo-61b908b9?originalSubdomain=ng',
-    ],
+    link: ['https://www.linkedin.com/in/adedayo-adebajo-61b908b9?originalSubdomain=ng'],
   },
 ];
