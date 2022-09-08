@@ -117,6 +117,9 @@ const Subscription = () => {
               >
                 SUBSCRIBE
               </Button>
+              <div id="subscribe-note" className={note.note ? note.status : ''}>
+                {note.note}
+              </div>
             </InputGroup>
           </form>
         </motion.div>
