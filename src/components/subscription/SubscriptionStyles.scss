@@ -105,4 +105,14 @@
   .input-group {
     width: 90%;
   }
+  .input-group {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }

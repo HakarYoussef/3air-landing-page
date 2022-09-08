@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import './Advisors.scss';
 import Container from 'react-bootstrap/Container';
+import Member from '../MembersProfile/Member';
 import Slider from 'react-slick';
 import { advisorsData } from './data';
 
@@ -52,19 +53,16 @@ function Advisors() {
   return (
     <>
       <Container>
-        <h2 className="roadHeaderContainer">Advisors</h2>
+        <h2 className="roadHeaderContainer" id="team">
+          Advisors
+        </h2>
 
         <Container className="advisors-lg">
           {advisorsData.map((item) => (
             <div className="advisors-members">
               <div className="members">
                 <div className="members-images">
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="linkedin"
-                  >
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
                     <img src={item.img} alt="Profile" />
                   </a>
 
@@ -87,7 +85,7 @@ function Advisors() {
             </div>
           ))}
         </Container>
-        <Container className="advisors-sm">
+        <Container className="team-members-sm">
           <Slider className="advisors-sm" ref={sliderRef} {...settings}>
             {advisorsData.map((item) => (
               <div ref={sliderRef} className="advisors-members">
@@ -105,6 +103,7 @@ function Advisors() {
                       href={item.link}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="linkedin"
                     >
                       <img src="./assets/linkedin.svg" alt="Linkedin" />
                     </a>
