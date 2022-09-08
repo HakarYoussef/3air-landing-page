@@ -74,14 +74,14 @@
   position: absolute;
   bottom: -2px;
   left: -100%;
-  background: #ed174c;
+
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 
 .nav-link:hover {
   left: 0;
-  color: #ed174c;
+  color: #84ecef;
 }
 
 .nav-link:hover:after {
@@ -111,7 +111,7 @@
     background: #ed174c;
 
     .nav-link {
-      color: rgb(235, 18, 18) !important;
+      color: #ffffff;
       padding-bottom: 15px !important;
     }
 
@@ -190,9 +190,13 @@
     padding: 30px;
   }
   .headerWrapperFixed .nav-link {
-    color: #ed174c !important;
+    color: #ffffff !important;
     opacity: 0.8;
     font-size: 18px;
+
+    &:hover {
+      color: #84ecef !important;
+    }
   }
 
   .header-brand {
@@ -218,23 +222,17 @@
   }
 
   .menu {
-    background: linear-gradient(
-      45deg,
-      rgba(250, 250, 250, 0.05) 5%,
-      rgba(250, 250, 250, 0.1) 90%
-    );
+    background: linear-gradient(267.18deg, #84ecef 2.35%, #ec1651 69.32%);
     width: 100%;
     height: 100%;
     position: fixed;
     z-index: 100000;
     display: flex;
     align-items: center;
-    margin-top: 80px;
-    border-radius: 24px;
+    margin-top: 70px;
     right: 0;
     padding-top: 20px;
-    backdrop-filter: blur(45px);
-    border: 2px solid rgba(237, 23, 76, 0.05);
+
     animation: dropdown 0.4s cubic-bezier(0.1, 0.7, 0.1, 1);
   }
 
@@ -279,6 +277,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(237, 23, 76, 1);
+    color: #ffffff;
   }
 }

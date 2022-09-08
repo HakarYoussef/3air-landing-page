@@ -86,7 +86,6 @@ const Subscription = () => {
     console.log('correct email type');
     console.log(recaptchaRef);
     recaptchaRef.current.execute();
-
   };
   return (
     <>
@@ -112,6 +111,7 @@ const Subscription = () => {
                 sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                 onVerify={onVerify}
               />
+
               <Form.Control
                 placeholder="Email"
                 aria-label="Recipient's email"
@@ -130,12 +130,19 @@ const Subscription = () => {
               <div id="subscribe-note" className={note.note ? note.status : ''}>
                 {note.note}
               </div>
+              <Reaptcha
+                ref={recaptchaRef}
+                className="recaptcha"
+                size="invisible"
+                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                onVerify={onVerify}
+              />
             </InputGroup>
           </form>
         </motion.div>
       </Container>
     </>
   );
-}
+};
 
 export default Subscription;
