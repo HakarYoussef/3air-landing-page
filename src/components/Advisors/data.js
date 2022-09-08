@@ -60,7 +60,7 @@ export const advisorsData = [
     desc: ['CCO at Cerafiltec, Strategy & Financial Advisor'],
     img: ['./assets/julius.svg'],
     link: [
-      'https://www.linkedin.com/in/julius-gloeckner-mba-cpacia-cfe-a061a31b/',
+      'https://www.linkedin.com/in/julius-gloeckner-mba-cpa-cia-cfe-a061a31b',
     ],
   },
   {
@@ -83,7 +83,7 @@ export const advisorsData = [
     desc: ['MD at Jelurida Africa, Blockchain Advisor'],
     img: ['./assets/adedayo.svg'],
     link: [
-      'https://www.linkedin.com/in/adedayo-adebajo-61b908b9/overlay/photo/',
+      'https://www.linkedin.com/in/adedayo-adebajo-61b908b9?originalSubdomain=ng',
     ],
   },
 ];
