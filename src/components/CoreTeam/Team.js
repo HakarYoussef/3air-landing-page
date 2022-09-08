@@ -68,7 +68,10 @@ function Team() {
             <div className="advisors-members">
               <div className="members">
                 <div className="members-images">
-                  <img src={item.img} alt="Profile" />
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    <img src={item.img} alt="Profile" />
+                  </a>
+
                   <a
                     href={item.link}
                     target="_blank"
