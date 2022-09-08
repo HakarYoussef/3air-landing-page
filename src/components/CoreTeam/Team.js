@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import './Team.scss';
 import Container from 'react-bootstrap/Container';
+import Member from '../MembersProfile/Member';
 import Slider from 'react-slick';
 import { teamData } from './data';
 
@@ -62,10 +63,7 @@ function Team() {
             <div className="advisors-members">
               <div className="members">
                 <div className="members-images">
-                  <a href={item.link} target="_blank" rel="noopener noreferrer">
-                    <img src={item.img} alt="Profile" />
-                  </a>
-
+                  <img src={item.img} alt="Profile" />
                   <a
                     href={item.link}
                     target="_blank"
@@ -91,15 +89,7 @@ function Team() {
               <div ref={sliderRef} className="advisors-members">
                 <div className="members">
                   <div className="members-images">
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="linkedin"
-                    >
-                      <img src={item.img} alt="Profile" />
-                    </a>
-
+                    <img src={item.img} alt="Profile" />
                     <a
                       href={item.link}
                       target="_blank"

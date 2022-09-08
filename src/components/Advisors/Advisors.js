@@ -60,10 +60,7 @@ function Advisors() {
             <div className="advisors-members">
               <div className="members">
                 <div className="members-images">
-                  <a href={item.link} target="_blank" rel="noopener noreferrer">
-                    <img src={item.img} alt="Profile" />
-                  </a>
-
+                  <img src={item.img} alt="Profile" />
                   <a
                     href={item.link}
                     target="_blank"
@@ -89,18 +86,12 @@ function Advisors() {
               <div ref={sliderRef} className="advisors-members">
                 <div className="members">
                   <div className="members-images">
+                    <img src={item.img} alt="Profile" />
                     <a
                       href={item.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                    >
-                      <img src={item.img} alt="Profile" />
-                    </a>
-
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      className="linkedin"
                     >
                       <img src="./assets/linkedin.svg" alt="Linkedin" />
                     </a>
