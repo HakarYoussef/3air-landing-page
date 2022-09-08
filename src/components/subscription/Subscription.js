@@ -135,6 +135,6 @@ const Subscription = () => {
       </Container>
     </>
   );
-};
+}
 
 export default Subscription;

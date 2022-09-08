@@ -58,7 +58,9 @@ function Team() {
   return (
     <>
       <Container>
-        <h2 className="roadHeaderContainer" id='team'>Team</h2>
+        <h2 className="roadHeaderContainer" id="team">
+          Team
+        </h2>
         <div className="roadOverlay"></div>
 
         <Container className="team-members-lg">
@@ -66,7 +68,10 @@ function Team() {
             <div className="advisors-members">
               <div className="members">
                 <div className="members-images">
-                  <img src={item.img} alt="Profile" />
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+                    <img src={item.img} alt="Profile" />
+                  </a>
+
                   <a
                     href={item.link}
                     target="_blank"
@@ -92,7 +97,15 @@ function Team() {
               <div ref={sliderRef} className="advisors-members">
                 <div className="members">
                   <div className="members-images">
-                    <img src={item.img} alt="Profile" />
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="linkedin"
+                    >
+                      <img src={item.img} alt="Profile" />
+                    </a>
+
                     <a
                       href={item.link}
                       target="_blank"
