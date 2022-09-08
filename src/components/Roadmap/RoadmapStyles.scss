@@ -1,0 +1,125 @@
+.roadCardWrapper {
+  background: linear-gradient(
+    140deg,
+    rgba(236, 22, 81, 1) 20%,
+    rgba(132, 236, 239, 1) 100%
+  );
+  color: #fff;
+  height: 200px;
+  margin: 20px;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+.roadCardTop {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.roadOverlay {
+  position: absolute;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 1%,
+    rgba(255, 255, 255, 0) 2%,
+    rgba(255, 255, 255, 0) 77%,
+    rgba(255, 255, 255, 1) 88%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  overflow: visible;
+  pointer-events: none;
+  width: 100%;
+  height: 35vh;
+  margin: 0 -30px;
+  z-index: 5;
+}
+
+.roadHeaderContainer {
+  margin-top: 70px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #ec1651;
+  font-size: 38px;
+  line-height: 53px;
+  font-weight: 800;
+}
+
+.roadCardBottom > li {
+  font-size: 14px;
+}
+
+.roadmapBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  margin: 40px auto;
+}
+
+.arrowBtnContainer {
+  background: linear-gradient(269.14deg, #84ecef 1.14%, #ec1651 59.79%);
+  padding: 2px;
+  margin: 0 10px;
+}
+
+.arrowBtn {
+  background: white;
+  padding: 10px 40px;
+  border-radius: 50px;
+}
+.arrowBtn span {
+  background: linear-gradient(269.14deg, #84ecef 1.14%, #ec1651 59.79%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 1080px) {
+  .roadHeaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .roadOverlay {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 1%,
+      rgba(255, 255, 255, 0) 2%,
+      rgba(255, 255, 255, 0) 84%,
+      rgba(255, 255, 255, 0.5) 92%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+}
+
+.slick-dots.slick-thumb {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.slick-dots.slick-thumb li {
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+  border-radius: 999px;
+  transition: all 0.5s ease-in-out;
+  will-change: width;
+  background-color: rgba(236, 22, 81, 0.6);
+}
+
+.slick-dots.slick-thumb li.slick-active {
+  background-color: rgb(236, 22, 81);
+  width: 24px;
+}

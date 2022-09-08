@@ -1,0 +1,34 @@
+.team-members-lg {
+  display: flex;
+  flex-direction: row;
+  row-gap: 20px;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+.team-members-lg::after {
+  content: '';
+  flex: auto;
+}
+
+.team-members-sm {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .team-members-sm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 340px;
+  }
+
+  .team-members-sm {
+    display: block;
+  }
+  .team-members-lg {
+    display: none;
+  }
+}

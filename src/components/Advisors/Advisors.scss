@@ -1,0 +1,34 @@
+.advisors-lg {
+  display: flex;
+  flex-direction: row;
+  row-gap: 20px;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+.advisors-lg::after {
+  content: '';
+  flex: auto;
+}
+
+.advisors-sm {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .advisors-sm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 340px;
+  }
+
+  .advisors-sm {
+    display: block;
+  }
+  .advisors-lg {
+    display: none;
+  }
+}

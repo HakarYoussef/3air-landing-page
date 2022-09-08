@@ -1,0 +1,79 @@
+.statsContainer {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 70px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: linear-gradient(96.68deg, #ec1651 -0.95%, #84ecef 100.81%);
+  border-radius: 30px;
+  padding: 40px 30px;
+}
+
+.statsStyle {
+  flex: 1;
+  display: flex;
+  background-image: url(../../../public/assets/diagram2.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.statNum {
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 78px;
+  color: #fff;
+}
+
+.statsFirstBlock {
+  margin-right: 50px;
+}
+.statssecondBlock {
+  margin-top: 20px;
+}
+
+.statText {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  margin-top: -10px;
+  color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  .statsStyle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: none;
+  }
+  .statsContainer {
+    background: none;
+    margin-top: 0;
+  }
+  .numTextContainer {
+    border: 2px solid #e9e9ea;
+    border-radius: 15px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .statText {
+    font-size: 16px;
+    color: #ed174c;
+  }
+  .statNum {
+    font-size: 36px;
+    color: #ed174c;
+  }
+  .statsFirstBlock {
+    margin-top: 10px;
+    margin-right: 0;
+  }
+  .statssecondBlock {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,95 @@
+.newusers {
+  padding: 25px 0px 40px;
+  background: #84ecef;
+  background-image: url('./../../../public/assets/users-bg.svg');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+.billions h2 {
+  color: #000000;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+.billions h3 {
+  color: #ec1651;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 70px;
+}
+
+.users-diagram {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.users-doll {
+  float: right;
+  margin-top: -150px;
+}
+
+.doll {
+  max-width: 1300px;
+  width: 1300px;
+}
+
+@media screen and (max-width: 1024px) {
+  .doll {
+    width: 100%;
+  }
+
+  .users-diagram img {
+    width: 100%;
+  }
+
+  .billions h2 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .billions h3 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .users-doll img {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .doll {
+    width: 100%;
+  }
+
+  .users-diagram img {
+    width: 100%;
+  }
+
+  .billions h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .billions h3 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .users-doll img {
+    width: 100%;
+  }
+
+  .users-doll {
+    margin-top: -80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 30%;
+    height: 150px;
+  }
+}

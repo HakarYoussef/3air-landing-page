@@ -1,0 +1,19 @@
+.airLogo {
+  width: 110px;
+}
+
+.loaderWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: linear-gradient(
+    25deg,
+    rgba(231, 20, 99, 1) 0%,
+    rgba(182, 20, 90, 1) 100%
+  );
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  overflow: hidden;
+}

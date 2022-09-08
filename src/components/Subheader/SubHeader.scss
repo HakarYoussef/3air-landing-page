@@ -1,0 +1,53 @@
+.subHeaderContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 70px;
+  color: #000000;
+  text-align: center;
+}
+
+.hrLineLeft {
+  flex: 1;
+  height: 1px;
+  background-color: #e9e9ea;
+  margin-right: 15px;
+}
+
+.hrLineRight {
+  flex: 1;
+  height: 1px;
+  background-color: #e9e9ea;
+  margin-left: 15px;
+}
+
+.subHeaderTextStyle {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.descContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.descContainer>p:first-child {
+  font-size: 1rem;
+  color: #ec1651;
+  font-weight: 700;
+  margin: 30px 20px;
+  text-align: center;
+}
+
+p:nth-child(2) {
+  font-size: 1rem;
+  text-align: center;
+  color: #000000;
+}
+
+@media screen and (max-width:767px) {
+  .subHeaderTextStyle {
+    font-size: 1rem;
+  }
+}
