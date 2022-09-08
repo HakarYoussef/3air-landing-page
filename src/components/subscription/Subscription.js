@@ -96,11 +96,11 @@ const Subscription = () => {
           <h1>Register now to stay up-to-date!</h1>
           <form id="newsletter" onSubmit={subscribe}>
             <InputGroup>
-              <ReCAPTCHA
+              {/* <ReCAPTCHA
                 ref={recaptchaRef}
                 size="invisible"
                 sitekey="6LcizmgfAAAAAAVBwAhBOTdchzmVJVkKR58dKp70"
-              />
+              /> */}
               <Form.Control
                 placeholder="Email"
                 aria-label="Recipient's email"
@@ -116,9 +116,9 @@ const Subscription = () => {
               >
                 SUBSCRIBE
               </Button>
-              <div id="subscribe-note" className={note.note ? note.status : ''}>
+              {/* <div id="subscribe-note" className={note.note ? note.status : ''}>
                 {note.note}
-              </div>
+              </div> */}
             </InputGroup>
           </form>
         </motion.div>
