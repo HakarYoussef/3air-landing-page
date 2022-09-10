@@ -22,11 +22,11 @@ function Partners() {
         <Container className="logosContainer">
           <img height={36} src="./assets/iceaddis.svg" alt="Partners" />
 
-          <img height={24} src="./assets/it.png" alt="Partners" />
+          <img height={22} src="./assets/it.png" alt="Partners" />
 
           <img height={36} src="./assets/tele.png" alt="Partners" />
 
-          <img height={44} src="./assets/africa.png" alt="Partners" />
+          <img height={58} src="./assets/africa.png" alt="Partners" />
 
           <img height={38} src="./assets/hero.png" alt="Partners" />
 
