@@ -77,7 +77,9 @@ function Roadmap() {
 
               {item.desc.map((descItem) => (
                 <div className="roadCardBottom">
-                  <li key={descItem.id}>{descItem}</li>
+                  <ul>
+                    <li key={descItem.id}>{descItem}</li>
+                  </ul>
                 </div>
               ))}
             </motion.div>

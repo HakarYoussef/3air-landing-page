@@ -1,7 +1,7 @@
 export const advisorsData = [
   {
     id: 0,
-    name: 'EMMANUEL BABALOLA "Babz"',
+    name: 'Emmanuel Babalola “Babz”',
     desc: ['CEO at Binance Africa & Bundle, Blockchain Advisor'],
     img: ['./assets/babs.png'],
     link: ['https://www.linkedin.com/in/emmexdee/?originalSubdomain=ng'],

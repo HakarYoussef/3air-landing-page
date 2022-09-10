@@ -16,43 +16,30 @@ import Subscription from './components/subscription/Subscription';
 import Advisors from './components/Advisors/Advisors';
 import Partners from './components/Partners/Partners';
 import Backers from './components/Backers/Backers';
-import Loader from './components/Loader/Loader';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <Header />
-          <Hero />
-          <LogosSection />
-          <NewUsers />
-          <FrictionlessExperience />
-          <DefiAndBanking />
-          <Edication />
-          <NFTsandOwnership />
-          <DigitalIdentities />
-          <Architecture />
-          <Team />
-          <Advisors />
-          <Partners />
-          <Backers />
-          <Roadmap />
-          <Subscription />
-          <Footer />
-        </>
-      )}
+      <>
+        <Header />
+        <Hero />
+        <LogosSection />
+        <NewUsers />
+        <FrictionlessExperience />
+        <DefiAndBanking />
+        <Edication />
+        <NFTsandOwnership />
+        <DigitalIdentities />
+        <Architecture />
+        <Team />
+        <Advisors />
+        <Partners />
+        <Backers />
+        <Roadmap />
+        <Subscription />
+        <Footer />
+      </>
     </>
   );
 }
