@@ -20,7 +20,7 @@ function Footer() {
             </p>
             <p className="copyright">© 2022 3air, All Rights Reserved</p>
           </Col>
-          <Col xl={2} lg={2} md={2} sm={6} xs={6}>
+          <Col xl={2} lg={2} md={2} sm={6} xs={4}>
             <ul className="footer-links">
               <li>
                 <a

@@ -14,12 +14,17 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+
   color: black;
   padding-right: 80px;
 }
 
 .footer-intro span {
   color: #ec1651;
+}
+
+.footer-links li:nth-child(4) {
+  margin-left: 20px;
 }
 
 .copyright {
@@ -38,11 +43,7 @@
 
 .footer-links li {
   list-style: none;
-}
-
-.footer-links li:nth-child(2) {
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin-top: 0;
 }
 
 .footer-links li a {
@@ -77,6 +78,9 @@
   .secondsocial {
     margin-top: 20px;
     justify-content: flex-start;
+  }
+  .footer-links li {
+    margin-top: 15px;
   }
 
   .firstsocial {
