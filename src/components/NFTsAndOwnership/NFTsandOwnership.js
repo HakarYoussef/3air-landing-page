@@ -19,7 +19,7 @@ function NFTsandOwnership() {
             staggerChildren: 0.5,
           }}
         >
-          <p>NFTs grant you access to the Internet - first time ever</p>
+          <p className="nftPara">NFTs grant you access to the Internet - first time ever</p>
           <div className="nftContainer">
             <div className="nftWidgets">
               <FrictionlessCard

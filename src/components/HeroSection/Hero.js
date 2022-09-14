@@ -18,8 +18,8 @@ function Hero() {
                 <h1>
                   Connectivity <br />
                   <span>
-                    and Banking <br />
-                  </span>
+                    and
+                  </span> Banking <br />
                   <span className="billion">for the Next Billion</span>
                 </h1>
               </div>

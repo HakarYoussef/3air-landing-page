@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import './Advisors.scss';
 import Container from 'react-bootstrap/Container';
-import Member from '../MembersProfile/Member';
+// import Member from '../MembersProfile/Member';
 import Slider from 'react-slick';
 import { advisorsData } from './data';
 
@@ -58,8 +58,8 @@ function Advisors() {
         </h2>
 
         <Container className="advisors-lg">
-          {advisorsData.map((item) => (
-            <div className="advisors-members">
+          {advisorsData.map((item, i) => (
+            <div className="advisors-members" key={i}>
               <div className="members">
                 <div className="members-images">
                   <a href={item.link} target="_blank" rel="noopener noreferrer">
@@ -87,8 +87,8 @@ function Advisors() {
         </Container>
         <Container className="team-members-sm">
           <Slider className="advisors-sm" ref={sliderRef} {...settings}>
-            {advisorsData.map((item) => (
-              <div ref={sliderRef} className="advisors-members">
+            {advisorsData.map((item, i) => (
+              <div ref={sliderRef} className="advisors-members" key={i}>
                 <div className="members">
                   <div className="members-images">
                     <a

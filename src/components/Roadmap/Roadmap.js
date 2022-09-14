@@ -59,10 +59,10 @@ function Roadmap() {
       <Container>
         <h2 className="roadHeaderContainer">Roadmap</h2>
 
-        <Slider ref={sliderRef} {...settings}>
-          {roadmapData.map((item) => (
-            <motion.div
+          {roadmapData.map((item, i) => (
+            <div
               ref={sliderRef}
+              key={i}
               className="roadCardWrapper"
               initial={{ y: 75, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -71,20 +71,21 @@ function Roadmap() {
                 staggerChildren: 0.5,
               }}
             >
+              <div className="roadDiv">
               <h4 key={item.id} className="roadCardTop">
                 {item.title}
               </h4>
 
-              {item.desc.map((descItem) => (
-                <div className="roadCardBottom">
+              {item.desc.map((descItem, i) => (
+                <div className="roadCardBottom" key={i}>
                   <ul>
                     <li key={descItem.id}>{descItem}</li>
                   </ul>
                 </div>
               ))}
-            </motion.div>
+              </div>
+            </div>
           ))}
-        </Slider>
         <ButtonGroup className="roadmapBtns">
           <Button
             className="arrowBtnContainer"

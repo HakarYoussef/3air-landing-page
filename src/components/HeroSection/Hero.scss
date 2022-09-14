@@ -97,6 +97,9 @@
 .asal-join {
   background: linear-gradient(269.14deg, #84ecef 1.14%, #ec1651 59.79%);
   padding: 2px;
+  &:hover {
+    transform: translateY(-3px) scale(1.05);
+  }
 }
 
 .main-join {
@@ -106,10 +109,6 @@
   display: flex;
   flex-direction: row;
   transition: transform 0.4s cubic-bezier(0.1, 0.7, 0.1, 1), box-shadow 0.25s;
-
-  &:hover {
-    transform: translateY(-3px) scale(1.05);
-  }
 }
 
 .main-join span {
@@ -131,9 +130,6 @@
     opacity: 0.2;
     z-index: -1;
   }
-  .connectivity span {
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -142,8 +138,8 @@
     right: 0%;
   }
 
-  .connectivity span {
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  .connectivity span.billion {
+    text-shadow: -1px 0 rgb(0, 0, 0), 0 1px black, 1px 0 black, 0 -1px black;
   }
 
   .heroContainer svg {
