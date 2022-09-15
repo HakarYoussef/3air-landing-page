@@ -19,6 +19,7 @@ function Roadmap() {
     arrows: false,
     slidesToScroll: 3.2,
     initialSlide: 0,
+    dotsClass: "slick-dots slick-thumb",
 
     responsive: [
       {

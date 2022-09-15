@@ -98,13 +98,17 @@ ul > li {
   }
 }
 
-.slick-dots.slick-thumb {
+.slick-dots {
+  list-style-type: none;
+}
+
+.slick-thumb {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.slick-dots.slick-thumb li {
+.slick-thumb li {
   width: 10px;
   height: 10px;
   margin: 0 3px;
@@ -114,7 +118,7 @@ ul > li {
   background-color: rgba(236, 22, 81, 0.6);
 }
 
-.slick-dots.slick-thumb li.slick-active {
+.slick-thumb li.slick-active {
   background-color: rgb(236, 22, 81);
   width: 24px;
 }

@@ -14,8 +14,9 @@ function Team() {
     speed: 500,
     slidesToShow: 3.2,
     arrows: true,
-    slidesToScroll: 1,
+    slidesToScroll: 3.2,
     initialSlide: 0,
+    dotsClass: "slick-dots slick-thumb",
 
     responsive: [
       {
