@@ -7,7 +7,6 @@ import { roadmapData } from './data';
 import './RoadmapStyles.scss';
 import Button from 'react-bootstrap/esm/Button';
 import ButtonGroup from 'react-bootstrap/esm/ButtonGroup';
-// import { motion } from 'framer-motion';
 
 function Roadmap() {
   const sliderRef = useRef(null);
@@ -29,10 +28,6 @@ function Roadmap() {
     arrows: false,
     slidesToScroll: 3.2,
     initialSlide: 0,
-    customPaging: function (i) {
-      return <div className="dot"></div>;
-    },
-    dotsClass: 'slick-dots slick-thumb',
 
     responsive: [
       {
@@ -72,32 +67,32 @@ function Roadmap() {
             (
               <Slider className="roadmap-sm" ref={sliderRef} {...settings}>
                 {roadmapData.map((item, i) => (
-                  <div
-                    ref={sliderRef}
-                    key={i}
-                    className="roadCardWrapper"
-                    initial={{ y: 75, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once: false, amount: 0.3 }}
-                    transition={{
-                      staggerChildren: 0.5,
-                    }}
-                  >
-                    <div className="roadDiv">
-                      <h4 key={item.id} className="roadCardTop">
-                        {item.title}
-                      </h4>
-      
-                      {item.desc.map((descItem, i) => (
-                        <div className="roadCardBottom" key={i}>
-                          <ul>
-                            <li key={descItem.id}>{descItem}</li>
-                          </ul>
-                        </div>
-                      ))}
+                    <div
+                      ref={sliderRef}
+                      key={i}
+                      className="roadCardWrapper"
+                      initial={{ y: 75, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      viewport={{ once: false, amount: 0.3 }}
+                      transition={{
+                        staggerChildren: 0.5,
+                      }}
+                    >
+                      <div className="roadDiv">
+                        <h4 key={item.id} className="roadCardTop">
+                          {item.title}
+                        </h4>
+        
+                        {item.desc.map((descItem, i) => (
+                          <div className="roadCardBottom" key={i}>
+                            <ul>
+                              <li key={descItem.id}>{descItem}</li>
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </Slider>
             ) :
             (

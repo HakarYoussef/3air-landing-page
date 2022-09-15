@@ -1,26 +1,20 @@
 import React, { useRef } from 'react';
 import './Team.scss';
 import Container from 'react-bootstrap/Container';
-// import Member from '../MembersProfile/Member';
 import Slider from 'react-slick';
 import { teamData } from './data';
 
 function Team() {
   const sliderRef = useRef(null);
-  console.log(sliderRef.current);
 
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 3.2,
-    arrows: false,
-    slidesToScroll: 3.2,
+    arrows: true,
+    slidesToScroll: 1,
     initialSlide: 0,
-    customPaging: function (i) {
-      return <div className="dot"></div>;
-    },
-    dotsClass: 'slick-dots slick-thumb',
 
     responsive: [
       {
