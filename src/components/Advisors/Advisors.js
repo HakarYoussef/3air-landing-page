@@ -3,7 +3,7 @@ import './Advisors.scss';
 import Container from 'react-bootstrap/Container';
 import Slider from 'react-slick';
 import { advisorsData } from './data';
-import Member from '../MembersProfile/Member';
+import '../MembersProfile/Member.scss';
 import { Button, ButtonGroup } from 'react-bootstrap';
 
 function Advisors() {
@@ -17,7 +17,7 @@ function Advisors() {
     arrows: true,
     slidesToScroll: 3.2,
     initialSlide: 0,
-    dotsClass: "slick-dots slick-thumb",
+    dotsClass: 'slick-dots slick-thumb',
 
     responsive: [
       {
