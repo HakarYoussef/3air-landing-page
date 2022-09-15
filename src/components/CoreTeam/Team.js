@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Slider from 'react-slick';
 import { teamData } from './data';
 import Member from '../MembersProfile/Member';
+import { Button, ButtonGroup } from 'react-bootstrap';
 
 function Team() {
   const sliderRef = useRef(null);
@@ -115,6 +116,26 @@ function Team() {
             ))}
           </Slider>
         </Container>
+        <ButtonGroup className="roadmapBtns">
+          <Button
+            className="arrowBtnContainer"
+            onClick={() => sliderRef.current.slickPrev()}
+          >
+            <div className="arrowBtn">
+              <span className="join" />
+              <img src="assets/prevArrowIcon.svg" alt="arrow" />
+            </div>
+          </Button>
+          <Button
+            className="arrowBtnContainer"
+            onClick={() => sliderRef.current.slickNext()}
+          >
+            <div className="arrowBtn">
+              <span className="join" />
+              <img src="assets/nextArrowIcon.svg" alt="arrow" />
+            </div>
+          </Button>
+        </ButtonGroup>
       </Container>
     </>
   );

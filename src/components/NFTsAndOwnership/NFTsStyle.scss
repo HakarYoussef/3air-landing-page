@@ -27,7 +27,7 @@
   padding: 0px 50px;
 }
 .nftPara {
-  padding: 5px;
+  padding: 18px;
   margin: 5px;
 }
 
@@ -35,5 +35,9 @@
   .nftContainer {
     display: flex;
     flex-direction: column;
+  }
+  .nftPara {
+    font-size: 18px !important;
+    font-weight: 600 !important;
   }
 }

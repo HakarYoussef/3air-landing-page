@@ -19,7 +19,7 @@ function Roadmap() {
     arrows: false,
     slidesToScroll: 3.2,
     initialSlide: 0,
-    dotsClass: "slick-dots slick-thumb",
+    dotsClass: 'slick-dots slick-thumb',
 
     responsive: [
       {
@@ -53,35 +53,35 @@ function Roadmap() {
     <>
       <Container>
         <h2 className="roadHeaderContainer">Roadmap</h2>
-          <Slider className="roadmap-sm" ref={sliderRef} {...settings}>
-            {roadmapData.map((item, i) => (
-                <div
-                  ref={sliderRef}
-                  key={i}
-                  className="roadCardWrapper"
-                  initial={{ y: 75, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  viewport={{ once: false, amount: 0.3 }}
-                  transition={{
-                    staggerChildren: 0.5,
-                  }}
-                >
-                  <div className="roadDiv">
-                    <h4 key={item.id} className="roadCardTop">
-                      {item.title}
-                    </h4>
-    
-                    {item.desc.map((descItem, i) => (
-                      <div className="roadCardBottom" key={i}>
-                        <ul>
-                          <li key={descItem.id}>{descItem}</li>
-                        </ul>
-                      </div>
-                    ))}
+        <Slider className="roadmap-sm" ref={sliderRef} {...settings}>
+          {roadmapData.map((item, i) => (
+            <div
+              ref={sliderRef}
+              key={i}
+              className="roadCardWrapper"
+              initial={{ y: 75, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{
+                staggerChildren: 0.5,
+              }}
+            >
+              <div className="roadDiv">
+                <h4 key={item.id} className="roadCardTop">
+                  {item.title}
+                </h4>
+
+                {item.desc.map((descItem, i) => (
+                  <div className="roadCardBottom" key={i}>
+                    <ul>
+                      <li key={descItem.id}>{descItem}</li>
+                    </ul>
                   </div>
-                </div>
-              ))}
-          </Slider>
+                ))}
+              </div>
+            </div>
+          ))}
+        </Slider>
 
         <ButtonGroup className="roadmapBtns">
           <Button
