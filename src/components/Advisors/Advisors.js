@@ -3,6 +3,7 @@ import './Advisors.scss';
 import Container from 'react-bootstrap/Container';
 import Slider from 'react-slick';
 import { advisorsData } from './data';
+import Member from '../MembersProfile/Member';
 
 function Advisors() {
   const sliderRef = useRef(null);

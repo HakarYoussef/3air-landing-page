@@ -3,6 +3,7 @@ import './Team.scss';
 import Container from 'react-bootstrap/Container';
 import Slider from 'react-slick';
 import { teamData } from './data';
+import Member from '../MembersProfile/Member';
 
 function Team() {
   const sliderRef = useRef(null);
