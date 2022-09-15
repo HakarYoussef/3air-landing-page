@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/3air-landing-page/static/css/main.9107a492.css",
-    "main.js": "/3air-landing-page/static/js/main.ab98ea93.js",
+    "main.js": "/3air-landing-page/static/js/main.0d30e5ff.js",
     "static/js/787.28cb0dcd.chunk.js": "/3air-landing-page/static/js/787.28cb0dcd.chunk.js",
     "static/media/architecture.svg": "/3air-landing-page/static/media/architecture.9bbeeb9ecf23846d5a8b.svg",
     "static/media/diagram2.svg": "/3air-landing-page/static/media/diagram2.e9acd6d560495fcf9e06.svg",
@@ -14,11 +14,11 @@
     "static/media/slick.woff": "/3air-landing-page/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/3air-landing-page/index.html",
     "main.9107a492.css.map": "/3air-landing-page/static/css/main.9107a492.css.map",
-    "main.ab98ea93.js.map": "/3air-landing-page/static/js/main.ab98ea93.js.map",
+    "main.0d30e5ff.js.map": "/3air-landing-page/static/js/main.0d30e5ff.js.map",
     "787.28cb0dcd.chunk.js.map": "/3air-landing-page/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9107a492.css",
-    "static/js/main.ab98ea93.js"
+    "static/js/main.0d30e5ff.js"
   ]
 }
