@@ -1,6 +1,6 @@
 .archMain {
   padding: 250px 0px 90px;
-  background-image: url('./../../../public/assets/architecture.svg');
+  background-image: url('../../../public/assets/architecture.svg');
   background-repeat: no-repeat;
   background-position: right;
   margin-top: -200px;
@@ -11,6 +11,7 @@
   padding: 10px 0px;
   background: #e9e9ea;
   z-index: -1;
+  transform: scale(0.95);
 }
 
 .archImage {

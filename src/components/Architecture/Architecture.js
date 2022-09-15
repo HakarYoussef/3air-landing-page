@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './ArchitectureStyle.scss';
 import Container from 'react-bootstrap/esm/Container';
 
 function Architecture() {
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+  });
+
   return (
     <>
       <Container className="archContainer">
@@ -11,7 +19,13 @@ function Architecture() {
       <Container fluid className="archMain">
         <Container fluid className="archInner">
           <div className="archImage">
-            <img src="./assets/architectureImg.png" alt="Architecture" />
+            {
+              width > 767 ? (
+                <img className="archImgVertical" src="./assets/architectureImgHorizontal.png" alt="Architecture" />
+              ) : (
+                <img className="archImgVertical" src="./assets/architectureImgVertical.png" alt="Architecture" />
+              )
+            }
           </div>
         </Container>
       </Container>
