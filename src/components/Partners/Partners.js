@@ -31,6 +31,16 @@ function Partners() {
           <img height={38} src="./assets/hero.png" alt="Partners" />
 
           <img height={32} src="./assets/skale.svg" alt="Partners" />
+
+          <img height={32} src="./assets/unilend.png" alt="Partners" />
+
+          <img height={32} src="./assets/bitliberte.png" alt="Partners" />
+
+          <img height={48} src="./assets/knit.png" alt="Partners" />
+
+          <img height={48} src="./assets/ame.png" alt="Partners" />
+
+          <img height={48} src="./assets/nest.png" alt="Partners" />
         </Container>
       </Container>
     </>

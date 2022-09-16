@@ -3,6 +3,14 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  column-gap: 30px;
+  flex-wrap: wrap;
+}
+
+.logosContainer::after {
+  content: '';
+  flex: auto;
+  max-width: 615px;
 }
 
 .logosContainer > img {
@@ -26,8 +34,14 @@
 @media screen and (max-width: 1024px) {
   .logosContainer {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     justify-content: space-evenly;
+  }
+  .logosContainer::after {
+    flex: none;
+    width: 100%;
   }
 
   .logosContainer > img:first-child {

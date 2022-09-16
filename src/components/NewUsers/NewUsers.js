@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './NewUsers.scss';
 import Container from 'react-bootstrap/Container';
 import { motion } from 'framer-motion';
 
 function NewUsers() {
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener('resize', handleResize);
+  });
+
   return (
     <div>
       <Container fluid className="newusers">
@@ -21,7 +29,11 @@ function NewUsers() {
             <h3>Unlimited potential for all.</h3>
           </motion.div>
           <div className="users-diagram">
-            <img src="./assets/users-diagram.svg" alt="bg" />
+            {width > 767 ? (
+              <img src="./assets/users-diagram.svg" alt="user-diagram-lg" />
+            ) : (
+              <img src="./assets/diagram-1-mobile.svg" alt="user-diagram-sm" />
+            )}
           </div>
         </Container>
       </Container>
