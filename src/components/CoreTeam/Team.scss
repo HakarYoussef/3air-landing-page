@@ -32,4 +32,14 @@
   .team-members-lg {
     display: none;
   }
+
+  .roadmapBtns {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .roadmapBtns {
+    visibility: hidden;
+  }
 }

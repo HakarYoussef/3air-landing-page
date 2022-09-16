@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './Advisors.scss';
 import Container from 'react-bootstrap/Container';
 import Slider from 'react-slick';
@@ -8,6 +8,14 @@ import { Button, ButtonGroup } from 'react-bootstrap';
 
 function Advisors() {
   const sliderRef = useRef(null);
+
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+  });
 
   const settings = {
     dots: true,
@@ -116,26 +124,32 @@ function Advisors() {
             ))}
           </Slider>
         </Container>
-        <ButtonGroup className="roadmapBtns">
-          <Button
-            className="arrowBtnContainer"
-            onClick={() => sliderRef.current.slickPrev()}
-          >
-            <div className="arrowBtn">
-              <span className="join" />
-              <img src="assets/prevArrowIcon.svg" alt="arrow" />
-            </div>
-          </Button>
-          <Button
-            className="arrowBtnContainer"
-            onClick={() => sliderRef.current.slickNext()}
-          >
-            <div className="arrowBtn">
-              <span className="join" />
-              <img src="assets/nextArrowIcon.svg" alt="arrow" />
-            </div>
-          </Button>
-        </ButtonGroup>
+        {
+          width <= 767 ? (
+            <ButtonGroup className="roadmapBtns">
+              <Button
+                className="arrowBtnContainer"
+                onClick={() => sliderRef.current.slickPrev()}
+              >
+                <div className="arrowBtn">
+                  <span className="join" />
+                  <img src="assets/prevArrowIcon.svg" alt="arrow" />
+                </div>
+              </Button>
+              <Button
+                className="arrowBtnContainer"
+                onClick={() => sliderRef.current.slickNext()}
+              >
+                <div className="arrowBtn">
+                  <span className="join" />
+                  <img src="assets/nextArrowIcon.svg" alt="arrow" />
+                </div>
+              </Button>
+            </ButtonGroup>
+          ) : (
+            <></>
+          )
+        }
       </Container>
     </>
   );
