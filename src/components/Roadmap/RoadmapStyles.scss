@@ -5,7 +5,7 @@
     rgba(132, 236, 239, 1) 100%
   );
   color: #fff;
-  height: 220px;
+  height: 300px;
   margin: 20px;
   padding: 10px 15px;
   text-align: center;
@@ -55,7 +55,6 @@ ul > li {
   align-items: center;
   width: 10%;
   margin: 40px auto;
-  visibility: hidden;
 }
 
 .arrowBtnContainer {
@@ -81,6 +80,9 @@ ul > li {
   margin: 0 10px;
   display: flex;
   flex-direction: column;
+  &:last-child {
+    margin-right: 30px;
+  }
 }
 
 @media only screen and (max-width: 1080px) {
@@ -90,10 +92,10 @@ ul > li {
     align-items: center;
   }
   .roadCardWrapper {
-    height: 240px;
+    height: 300px;
   }
   .roadmapBtns {
-    visibility: hidden;
+    visibility: visible;
   }
 }
 

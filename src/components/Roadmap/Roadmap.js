@@ -34,7 +34,7 @@ function Roadmap() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1.5,
+          slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1,
         },
@@ -42,7 +42,7 @@ function Roadmap() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1.1,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
