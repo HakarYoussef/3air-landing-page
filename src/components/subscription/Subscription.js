@@ -6,7 +6,6 @@ import Container from 'react-bootstrap/esm/Container';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import { motion } from 'framer-motion';
 
 const Subscription = () => {
   const [email, setEmail] = useState('');
