@@ -17,9 +17,7 @@ function Hero() {
               <div className="connectivity">
                 <h1>
                   Connectivity <br />
-                  <span>
-                    and
-                  </span> Banking <br />
+                  and Banking <br />
                   <span className="billion">for the Next Billion</span>
                 </h1>
               </div>

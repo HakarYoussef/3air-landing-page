@@ -32,7 +32,7 @@ function NewUsers() {
             {width > 767 ? (
               <img src="./assets/users-diagram.svg" alt="user-diagram-lg" />
             ) : (
-              <img src="./assets/diagram-1-mobile.svg" alt="user-diagram-sm" />
+              <img src="./assets/" alt="user-diagram-sm" />
             )}
           </div>
         </Container>
@@ -40,8 +40,8 @@ function NewUsers() {
       <Container className="doll">
         <div className="users-doll">
           <img
-            src="./assets/users-doll.svg"
-            alt="bg"
+            src="./assets/diagram-1-mobile.svg"
+            alt="doll"
             height={330}
             width={270}
           />
