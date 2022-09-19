@@ -1,0 +1,95 @@
+.wheretobuyContainer {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 100px;
+  background: linear-gradient(96.68deg, #ec1651 -0.95%, #84ecef 100.81%);
+  border-radius: 30px;
+  font-family: 'Montserrat';
+  color: white;
+  position: relative;
+  height: 80%;
+}
+
+.wheretobuyTitle {
+  color: white;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.wheretobuySectionLeft {
+  justify-content: left;
+  text-align: left;
+  margin-left: 3%;
+  margin-right: 9%;
+}
+
+.wheretobuyPara {
+  color: white;
+}
+
+.wheretobuyPara .solvFinance {
+  color: #84ecef;
+}
+
+.wheretobuyCheckList {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.wheretobuyGetithere {
+  color: black;
+  background-color: #84ecef;
+  width: 136px;
+  height: 42px;
+  border-radius: 50px;
+  border: none;
+}
+
+.wheretobuySectionRight {
+  margin-left: 9%;
+  transform: scale(0.8);
+}
+
+@media only screen and (max-width: 1024px) {
+  .wheretobuySectionLeft {
+    justify-content: left;
+    text-align: left;
+    margin-right: 70px;
+  }
+
+  .wheretobuySectionRight {
+    margin-left: 70px;
+    transform: scale(0.8);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .wheretobuySectionLeft {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 00px;
+    z-index: 100;
+  }
+
+  .wheretobuySectionRight {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 0px;
+    transform: scale(0.5);
+    opacity: 0.5;
+    z-index: 90;
+    position: absolute;
+  }
+  
+  .wheretobuyContainer {
+    padding: 10px;
+  }
+}

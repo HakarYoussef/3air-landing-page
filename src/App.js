@@ -7,6 +7,7 @@ import DefiAndBanking from './components/DefiAndBanking/DefiAndBanking';
 import NFTsandOwnership from './components/NFTsAndOwnership/NFTsandOwnership';
 import DigitalIdentities from './components/DigitalIdentities/DigitalIdentities';
 import Architecture from './components/Architecture/Architecture';
+import WhereToBuy from './components/WhereToBuy/WhereToBuy';
 import LogosSection from './components/HeroSection/LogosSection';
 import NewUsers from './components/NewUsers/NewUsers';
 import Team from './components/CoreTeam/Team';
@@ -25,6 +26,7 @@ function App() {
         <Header />
         <Hero />
         <LogosSection />
+        <WhereToBuy />
         <NewUsers />
         <FrictionlessExperience />
         <DefiAndBanking />

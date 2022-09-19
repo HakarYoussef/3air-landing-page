@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Image from 'react-bootstrap/Image';
 import './Header.scss';
-import { useState } from 'react';
+import Countdown from '../Countdown/Countdown';
 
 export default function Header() {
   const [fix, setFix] = useState(false);
@@ -38,6 +38,7 @@ export default function Header() {
       className={fix ? 'headerWrapperFixed' : 'headerWrapper'}
       expand="lg"
     >
+      <Countdown className="countdown"/>
       <Container className="header">
         <Navbar.Brand href="#">
           {fix ? (

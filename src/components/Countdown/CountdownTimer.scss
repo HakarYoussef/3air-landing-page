@@ -1,0 +1,64 @@
+.countdowntimer {
+  background-color: #ec1651;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Montserrat';
+}
+
+.countdowntimer-header {
+  font-size: 24px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.countdowntimer-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown-value {
+  font-size: 20px;
+}
+
+.countdown-unit {
+  font-size: 12px;
+  position: relative;
+  top: -5px;
+}
+
+.countdown-card {
+  margin: 2px;
+  background-color: #ec1651;
+  border-width: 1px;
+  border-color: white;
+  border-radius: 10px;
+  text-align: center;
+  width: 48px;
+  height: 48px;
+}
+
+.countdown-value {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1080px) {
+  .countdowntimer {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .countdowntimer-header {
+    width: 100%;
+  }
+
+  .countdowntimer {
+    display: block;
+  }
+}
