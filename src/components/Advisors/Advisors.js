@@ -100,7 +100,7 @@ function Advisors() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <img src={item.img} alt="Profile" />
+                      <img src={process.env.PUBLIC_URL+ item.img} alt="Profile" />
                     </a>
 
                     <a
