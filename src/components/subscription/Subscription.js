@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Reaptcha from 'reaptcha';
 import './SubscriptionStyles.scss';
 import Container from 'react-bootstrap/esm/Container';
@@ -12,6 +12,14 @@ const Subscription = () => {
   const [note, setNote] = useState({
     note: '',
     status: '',
+  });
+
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
   });
 
   const recaptchaRef = React.useRef();
@@ -90,41 +98,83 @@ const Subscription = () => {
         <div className="subContainer">
           <h1>Register now to stay up-to-date!</h1>
           <form id="newsletter" onSubmit={subscribe}>
-            <InputGroup>
-              <Reaptcha
-                className="subscribe-captcha-container"
-                ref={recaptchaRef}
-                size="invisible"
-                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                onVerify={onVerify}
-              />
-
-              <Form.Control
-                placeholder="Email"
-                aria-label="Recipient's email"
-                aria-describedby="basic-addon2"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <Button
-                type="submit"
-                variant="outline-secondary"
-                id="button-addon2"
-                disabled={submitting}
-              >
-                SUBSCRIBE
-              </Button>
-              <div id="subscribe-note" className={note.note ? note.status : ''}>
-                {note.note}
-              </div>
-              <Reaptcha
-                ref={recaptchaRef}
-                className="recaptcha"
-                size="invisible"
-                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                onVerify={onVerify}
-              />
-            </InputGroup>
+            {
+              width > 767 ? (
+                <InputGroup>
+                  <Reaptcha
+                    className="subscribe-captcha-container"
+                    ref={recaptchaRef}
+                    size="invisible"
+                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                    onVerify={onVerify}
+                  />
+    
+                  <Form.Control
+                    placeholder="Email"
+                    aria-label="Recipient's email"
+                    aria-describedby="basic-addon2"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <Button
+                    type="submit"
+                    variant="outline-secondary"
+                    id="button-addon2"
+                    disabled={submitting}
+                  >
+                    SUBSCRIBE
+                  </Button>
+                  <div id="subscribe-note" className={note.note ? note.status : ''}>
+                    {note.note}
+                  </div>
+                  <Reaptcha
+                    ref={recaptchaRef}
+                    className="recaptcha"
+                    size="invisible"
+                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                    onVerify={onVerify}
+                  />
+                </InputGroup>
+              ) : (
+                <>
+                  <Reaptcha
+                    className="subscribe-captcha-container"
+                    ref={recaptchaRef}
+                    size="invisible"
+                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                    onVerify={onVerify}
+                  />
+    
+                  <Form.Control
+                    placeholder="Email"
+                    aria-label="Recipient's email"
+                    aria-describedby="basic-addon2"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <br/>
+                  <Button
+                    type="submit"
+                    variant="outline-secondary"
+                    id="button-addon2"
+                    disabled={submitting}
+                  >
+                    SUBSCRIBE
+                  </Button>
+                  <br/>
+                  <div id="subscribe-note" className={note.note ? note.status : ''}>
+                    {note.note}
+                  </div>
+                  <Reaptcha
+                    ref={recaptchaRef}
+                    className="recaptcha"
+                    size="invisible"
+                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                    onVerify={onVerify}
+                  />
+                </>
+              )
+            }
           </form>
         </div>
       </Container>
