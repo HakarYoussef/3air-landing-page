@@ -21,9 +21,9 @@ function Architecture() {
           <div className="archImage">
             {
               width > 767 ? (
-                <img className="archImgVertical" src="./assets/architectureImgHorizontal.png" alt="Architecture" />
+                <img className="archImgVertical" src={process.env.PUBLIC_URL+'/assets/architectureImgHorizontal.png'} alt="Architecture" />
               ) : (
-                <img className="archImgVertical" src="./assets/architectureImgVertical.png" alt="Architecture" />
+                <img className="archImgVertical" src={process.env.PUBLIC_URL+'/assets/architectureImgVertical.png'} alt="Architecture" />
               )
             }
           </div>

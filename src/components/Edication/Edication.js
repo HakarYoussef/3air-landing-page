@@ -51,7 +51,7 @@ function Edication() {
               xsm={12}
               className="EdicationImageWrapper"
             >
-              <Image src="./assets/EdicationIllustration.svg" width={'100%'} />
+              <Image src={process.env.PUBLIC_URL+'/assets/EdicationIllustration.svg'} width={'100%'} />
             </Col>
           </Row>
         </Container>

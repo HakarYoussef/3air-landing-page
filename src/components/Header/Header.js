@@ -43,14 +43,14 @@ export default function Header() {
           {fix ? (
             <Image
               className="header-brand"
-              src="./assets/airLogoWhite.svg"
+              src={process.env.PUBLIC_URL+'/assets/airLogoWhite.svg'}
               height={'38px'}
               width={'94px'}
             />
           ) : (
             <Image
               className="header-brand"
-              src="./assets/Logo.svg"
+              src={process.env.PUBLIC_URL+'/assets/Logo.svg'}
               height={'48px'}
               width={'114px'}
             />

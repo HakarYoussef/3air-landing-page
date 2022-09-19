@@ -30,9 +30,9 @@ function NewUsers() {
           </motion.div>
           <div className="users-diagram">
             {width > 767 ? (
-              <img src="./assets/users-diagram.svg" alt="user-diagram-lg" />
+              <img src={process.env.PUBLIC_URL+'/assets/users-diagram.svg'} alt="user-diagram-lg" />
             ) : (
-              <img src="./assets/diagram-1-mobile.svg" alt="user-diagram-sm" />
+              <img src={process.env.PUBLIC_URL+'/assets/diagram-1-mobile.svg'} alt="user-diagram-sm" />
             )}
           </div>
         </Container>
@@ -40,7 +40,7 @@ function NewUsers() {
       <Container className="doll">
         <div className="users-doll">
           <img
-            src="./assets/users-doll.svg"
+            src={process.env.PUBLIC_URL+'/assets/users-doll.svg'}
             alt="doll"
             height={330}
             width={270}

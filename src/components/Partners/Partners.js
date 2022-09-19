@@ -20,27 +20,27 @@ function Partners() {
         </h2>
 
         <Container className="logosContainer">
-          <img height={36} src="./assets/iceaddis.svg" alt="Partners" />
+          <img height={36} src={process.env.PUBLIC_URL+'/assets/iceaddis.svg'} alt="Partners" />
 
-          <img height={22} src="./assets/it.png" alt="Partners" />
+          <img height={22} src={process.env.PUBLIC_URL+'/assets/it.png'} alt="Partners" />
 
-          <img height={36} src="./assets/tele.png" alt="Partners" />
+          <img height={36} src={process.env.PUBLIC_URL+'/assets/tele.png'} alt="Partners" />
 
-          <img height={58} src="./assets/africa.png" alt="Partners" />
+          <img height={58} src={process.env.PUBLIC_URL+'/assets/africa.png'} alt="Partners" />
 
-          <img height={38} src="./assets/hero.png" alt="Partners" />
+          <img height={38} src={process.env.PUBLIC_URL+'/assets/hero.png'} alt="Partners" />
 
-          <img height={32} src="./assets/skale.svg" alt="Partners" />
+          <img height={32} src={process.env.PUBLIC_URL+'/assets/skale.svg'} alt="Partners" />
 
-          <img height={32} src="./assets/unilend.png" alt="Partners" />
+          <img height={32} src={process.env.PUBLIC_URL+'/assets/unilend.png'} alt="Partners" />
 
-          <img height={32} src="./assets/bitliberte.png" alt="Partners" />
+          <img height={32} src={process.env.PUBLIC_URL+'/assets/bitliberte.png'} alt="Partners" />
 
-          <img height={48} src="./assets/knit.png" alt="Partners" />
+          <img height={48} src={process.env.PUBLIC_URL+'/assets/knit.png'} alt="Partners" />
 
-          <img height={48} src="./assets/ame.png" alt="Partners" />
+          <img height={48} src={process.env.PUBLIC_URL+'/assets/ame.png'} alt="Partners" />
 
-          <img height={48} src="./assets/nest.png" alt="Partners" />
+          <img height={48} src={process.env.PUBLIC_URL+'/assets/nest.png'} alt="Partners" />
         </Container>
       </Container>
     </>

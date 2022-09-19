@@ -68,7 +68,7 @@ function Advisors() {
               <div className="members">
                 <div className="members-images">
                   <a href={item.link} target="_blank" rel="noopener noreferrer">
-                    <img src={item.img} alt="Profile" />
+                    <img src={process.env.PUBLIC_URL + item.img} alt="Profile" />
                   </a>
 
                   <a
@@ -77,7 +77,7 @@ function Advisors() {
                     rel="noopener noreferrer"
                     className="linkedin"
                   >
-                    <img src="./assets/linkedin.svg" alt="Linkedin" />
+                    <img src={process.env.PUBLIC_URL+'/assets/linkedin.svg'} alt="Linkedin" />
                   </a>
                 </div>
                 <div className="memberCard">
@@ -110,7 +110,7 @@ function Advisors() {
                       rel="noopener noreferrer"
                       className="linkedin"
                     >
-                      <img src="./assets/linkedin.svg" alt="Linkedin" />
+                      <img src={process.env.PUBLIC_URL+'/assets/linkedin.svg'} alt="Linkedin" />
                     </a>
                   </div>
                   <div className="memberCard">

@@ -77,7 +77,7 @@ function Team() {
                     rel="noopener noreferrer"
                     className="linkedin"
                   >
-                    <img src="./assets/linkedin.svg" alt="Linkedin" />
+                    <img src={process.env.PUBLIC_URL+'/assets/linkedin.svg'} alt="Linkedin" />
                   </a>
                 </div>
                 <div className="memberCard">
@@ -101,7 +101,7 @@ function Team() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <img src={item.img} alt="Profile" />
+                      <img src={process.env.PUBLIC_URL + item.img} alt="Profile" />
                     </a>
 
                     <a
@@ -110,7 +110,7 @@ function Team() {
                       rel="noopener noreferrer"
                       className="linkedin"
                     >
-                      <img src="./assets/linkedin.svg" alt="Linkedin" />
+                      <img src={process.env.PUBLIC_URL+'/assets/linkedin.svg'} alt="Linkedin" />
                     </a>
                   </div>
                   <div className="memberCard">

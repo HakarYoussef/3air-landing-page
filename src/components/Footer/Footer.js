@@ -9,7 +9,7 @@ function Footer() {
     <>
       <Container className="footerwrapper" id="footer">
         <img
-          src="./assets/Logo.svg"
+          src={process.env.PUBLIC_URL+'/assets/Logo.svg'}
           alt="Footer-Logo"
           className="footer-logo"
         />
@@ -92,7 +92,7 @@ function Footer() {
                     target={'_blank'}
                     rel="noopener noreferrer"
                   >
-                    <img src="./assets/twitter.svg" alt="twitter" />
+                    <img src={process.env.PUBLIC_URL+'/assets/twitter.svg'} alt="twitter" />
                   </a>
                 </Col>
 
@@ -102,7 +102,7 @@ function Footer() {
                     target={'_blank'}
                     rel="noopener noreferrer"
                   >
-                    <img src="./assets/telegram.svg" alt="telegram" />
+                    <img src={process.env.PUBLIC_URL+'/assets/telegram.svg'} alt="telegram" />
                   </a>
                 </Col>
                 <Col xl={3} lg={3} md={3} sm={3} xs={3} className="firstsocial">
@@ -111,7 +111,7 @@ function Footer() {
                     target={'_blank'}
                     rel="noopener noreferrer"
                   >
-                    <img src="./assets/linkedin2.svg" alt="linkedin" />
+                    <img src={process.env.PUBLIC_URL+'/assets/linkedin2.svg'} alt="linkedin" />
                   </a>
                 </Col>
 
@@ -121,7 +121,7 @@ function Footer() {
                     target={'_blank'}
                     rel="noopener noreferrer"
                   >
-                    <img src="./assets/tiktok.svg" alt="tiktok" />
+                    <img src={process.env.PUBLIC_URL+'/assets/tiktok.svg'} alt="tiktok" />
                   </a>
                 </Col>
                 <Col
@@ -137,7 +137,7 @@ function Footer() {
                     target={'_blank'}
                     rel="noopener noreferrer"
                   >
-                    <img src="./assets/discord.svg" alt="discord" />
+                    <img src={process.env.PUBLIC_URL+'/assets/discord.svg'} alt="discord" />
                   </a>
                 </Col>
                 <Col
@@ -153,7 +153,7 @@ function Footer() {
                     target={'_blank'}
                     rel="noopener noreferrer"
                   >
-                    <img src="./assets/youtube.svg" alt="youtube" />
+                    <img src={process.env.PUBLIC_URL+'/assets/youtube.svg'} alt="youtube" />
                   </a>
                 </Col>
                 <Col
@@ -169,7 +169,7 @@ function Footer() {
                     target={'_blank'}
                     rel="noopener noreferrer"
                   >
-                    <img src="./assets/instagram.svg" alt="instagram" />
+                    <img src={process.env.PUBLIC_URL+'/assets/instagram.svg'} alt="instagram" />
                   </a>
                 </Col>
                 <Col
@@ -185,7 +185,7 @@ function Footer() {
                     target={'_blank'}
                     rel="noopener noreferrer"
                   >
-                    <img src="./assets/fb.svg" alt="facebook" />
+                    <img src={process.env.PUBLIC_URL+'/assets/fb.svg'} alt="facebook" />
                   </a>
                 </Col>
               </Row>
