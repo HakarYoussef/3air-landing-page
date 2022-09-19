@@ -15,9 +15,9 @@ function Roadmap() {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 3.2,
+    slidesToShow: 3,
     arrows: false,
-    slidesToScroll: 3.2,
+    slidesToScroll: 3,
     initialSlide: 0,
     dotsClass: 'slick-dots slick-thumb',
 
@@ -56,11 +56,9 @@ function Roadmap() {
         <Slider className="roadmap-sm" ref={sliderRef} {...settings}>
           {roadmapData.map((item, i) => (
             <div
-              ref={sliderRef}
-              key={i}
+              key={'roadmap' + i}
               className="roadCardWrapper"
               initial={{ y: 75, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{
                 staggerChildren: 0.5,
@@ -72,7 +70,7 @@ function Roadmap() {
                 </h4>
 
                 {item.desc.map((descItem, i) => (
-                  <div className="roadCardBottom" key={i}>
+                  <div className="roadCardBottom" key={'roadCard' + i}>
                     <ul>
                       <li key={descItem.id}>{descItem}</li>
                     </ul>

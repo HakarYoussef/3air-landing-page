@@ -20,9 +20,9 @@ function Team() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3.2,
+    slidesToShow: 3,
     arrows: true,
-    slidesToScroll: 3.2,
+    slidesToScroll: 3,
     initialSlide: 0,
     dotsClass: 'slick-dots slick-thumb',
 
@@ -39,15 +39,15 @@ function Team() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1.2,
-          slidesToScroll: 1.2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           initialSlide: 1,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1.1,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -63,7 +63,7 @@ function Team() {
 
         <Container className="team-members-lg">
           {teamData.map((item, i) => (
-            <div className="advisors-members" key={i}>
+            <div className="advisors-members" key={'teamdatalg' + i}>
               <div className="members">
                 <div className="members-images">
                   <a href={item.link} target="_blank" rel="noopener noreferrer">
@@ -92,7 +92,7 @@ function Team() {
         <Container className="team-members-sm">
           <Slider className="advisors-sm" ref={sliderRef} {...settings}>
             {teamData.map((item, i) => (
-              <div ref={sliderRef} className="advisors-members" key={i}>
+              <div className="advisors-members" key={'teamdatasm' + i}>
                 <div className="members">
                   <div className="members-images">
                     <a
