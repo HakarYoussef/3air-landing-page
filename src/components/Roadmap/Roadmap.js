@@ -90,7 +90,7 @@ function Roadmap() {
           >
             <div className="arrowBtn">
               <span className="join" />
-              <img src="assets/prevArrowIcon.svg" alt="arrow" />
+              <img src={process.env.PUBLIC_URL+ '/assets/prevArrowIcon.svg'} alt="arrow" />
             </div>
           </Button>
           <Button
@@ -99,7 +99,7 @@ function Roadmap() {
           >
             <div className="arrowBtn">
               <span className="join" />
-              <img src="assets/nextArrowIcon.svg" alt="arrow" />
+              <img src={process.env.PUBLIC_URL+ '/assets/nextArrowIcon.svg'} alt="arrow" />
             </div>
           </Button>
         </ButtonGroup>

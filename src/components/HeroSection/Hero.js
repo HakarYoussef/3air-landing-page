@@ -43,7 +43,7 @@ function Hero() {
                   >
                     <div className="btnInside">
                       LITEPAPER
-                      <img src="assets/whitearrow.svg" alt="arrow" />
+                      <img src={process.env.PUBLIC_URL+ '/assets/whitearrow.svg'} alt="arrow" />
                     </div>
                   </Button>
                   <Button
@@ -54,7 +54,7 @@ function Hero() {
                     <div className="main-join">
                       <div className="btnInside">
                         <span className="join">Join our Community</span>
-                        <img src="assets/gredientarrow.svg" alt="arrow" />
+                        <img src={process.env.PUBLIC_URL+ '/assets/gredientarrow.svg'} alt="arrow" />
                       </div>
                     </div>
                   </Button>

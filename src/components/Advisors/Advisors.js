@@ -1,10 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
-import './Advisors.scss';
-import Container from 'react-bootstrap/Container';
+import { Button, ButtonGroup, Container } from 'react-bootstrap';
 import Slider from 'react-slick';
 import { advisorsData } from './data';
 import '../MembersProfile/Member.scss';
-import { Button, ButtonGroup } from 'react-bootstrap';
+import './Advisors.scss';
 
 function Advisors() {
   const sliderRef = useRef(null);
@@ -133,7 +132,7 @@ function Advisors() {
               >
                 <div className="arrowBtn">
                   <span className="join" />
-                  <img src="assets/prevArrowIcon.svg" alt="arrow" />
+                  <img src={process.env.PUBLIC_URL+ '/assets/prevArrowIcon.svg'} alt="arrow" />
                 </div>
               </Button>
               <Button
@@ -142,7 +141,7 @@ function Advisors() {
               >
                 <div className="arrowBtn">
                   <span className="join" />
-                  <img src="assets/nextArrowIcon.svg" alt="arrow" />
+                  <img src={process.env.PUBLIC_URL+ '/assets/nextArrowIcon.svg'} alt="arrow" />
                 </div>
               </Button>
             </ButtonGroup>

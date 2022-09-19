@@ -1,11 +1,9 @@
 import React from 'react';
-import './EdicationStyles.scss';
-import Container from 'react-bootstrap/esm/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import SubHeader from '../Subheader/SubHeader';
+import { Image, Container, Row, Col } from 'react-bootstrap';
+// import Container from 'react-bootstrap/esm/Container';
 import FrictionlessCard from '../FrictionlessExperience/FrictionlessCard';
-import Image from 'react-bootstrap/Image';
+import SubHeader from '../Subheader/SubHeader';
+import './EdicationStyles.scss';
 
 function Edication() {
   return (
@@ -31,15 +29,15 @@ function Edication() {
               className="EdicationLeftSide"
             >
               <FrictionlessCard
-                CardImage={'assets/newUserIcon.svg'}
+                CardImage={process.env.PUBLIC_URL+ '/assets/newUserIcon.svg'}
                 CardText={'Staked tokens for each new user'}
               />
               <FrictionlessCard
-                CardImage={'assets/bagIcon.svg'}
+                CardImage={process.env.PUBLIC_URL+ '/assets/bagIcon.svg'}
                 CardText={'Student sponsoring and job creation'}
               />
               <FrictionlessCard
-                CardImage={'assets/giftIcon.svg'}
+                CardImage={process.env.PUBLIC_URL+ '/assets/giftIcon.svg'}
                 CardText={'Tokenized rewards system for grades'}
               />
             </Col>

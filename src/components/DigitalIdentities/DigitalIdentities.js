@@ -1,8 +1,8 @@
 import React from 'react';
 import Container from 'react-bootstrap/esm/Container';
 import DigitalCard from './DigitalCard';
-import './DigitalStyles.scss';
 import SubHeader from '../Subheader/SubHeader';
+import './DigitalStyles.scss';
 
 function DigitalIdentities() {
   return (
@@ -17,19 +17,19 @@ function DigitalIdentities() {
       <div className="CardContainerBottom">
         <DigitalCard
           CardText={'Easy, cheap, and trustless from anywhere in the world'}
-          CardImage={'assets/easyIcon.svg'}
+          CardImage={process.env.PUBLIC_URL+ '/assets/easyIcon.svg'}
         />
         <DigitalCard
           CardText={'Effective identification solution'}
-          CardImage={'assets/eyeIcon.svg'}
+          CardImage={process.env.PUBLIC_URL+ '/assets/eyeIcon.svg'}
         />
         <DigitalCard
           CardText={'Identity-as-a-service by ISPs for additional revenue'}
-          CardImage={'assets/fingerPrintIcon.svg'}
+          CardImage={process.env.PUBLIC_URL+ '/assets/fingerPrintIcon.svg'}
         />
         <DigitalCard
           CardText={'Potentially recognizable throughout the ecosystem'}
-          CardImage={'assets/identityIcon.svg'}
+          CardImage={process.env.PUBLIC_URL+ '/assets/identityIcon.svg'}
         />
       </div>
     </Container>

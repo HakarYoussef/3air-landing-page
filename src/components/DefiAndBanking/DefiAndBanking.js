@@ -1,9 +1,9 @@
 import React from 'react';
 import Container from 'react-bootstrap/esm/Container';
+import { motion } from 'framer-motion';
 import FrictionlessCard from '../FrictionlessExperience/FrictionlessCard';
 import SubHeader from '../Subheader/SubHeader';
 import './DefiAndBankingStyles.scss';
-import { motion } from 'framer-motion';
 
 function DefiAndBanking() {
   return (
@@ -34,23 +34,23 @@ function DefiAndBanking() {
           <motion.div></motion.div>
           <FrictionlessCard
             CardText={'Staking & farming'}
-            CardImage={'assets/moneyIcon.svg'}
+            CardImage={process.env.PUBLIC_URL+ '/assets/moneyIcon.svg'}
           />
           <FrictionlessCard
             CardText={'Safer lending'}
-            CardImage={'assets/handIcon.svg'}
+            CardImage={process.env.PUBLIC_URL+ '/assets/handIcon.svg'}
           />
           <FrictionlessCard
             CardText={'Bandwidth sharing'}
-            CardImage={'assets/bandIcon.svg'}
+            CardImage={process.env.PUBLIC_URL+ '/assets/bandIcon.svg'}
           />
           <FrictionlessCard
             CardText={'Vast ecosystem growth opportunities'}
-            CardImage={'assets/EcoIcon.svg'}
+            CardImage={process.env.PUBLIC_URL+ '/assets/EcoIcon.svg'}
           />
           <FrictionlessCard
             CardText={'Play and earn and Learn and earn apps'}
-            CardImage={'assets/gameIcon.svg'}
+            CardImage={process.env.PUBLIC_URL+ '/assets/gameIcon.svg'}
           />
         </Container>
       </motion.div>

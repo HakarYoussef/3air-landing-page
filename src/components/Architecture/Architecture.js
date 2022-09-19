@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './ArchitectureStyle.scss';
 import Container from 'react-bootstrap/esm/Container';
+import './ArchitectureStyle.scss';
 
 function Architecture() {
   const [width, setWidth] = useState(window.innerWidth);

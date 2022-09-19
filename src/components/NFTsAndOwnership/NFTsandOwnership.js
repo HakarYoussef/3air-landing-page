@@ -26,7 +26,7 @@ function NFTsandOwnership() {
                 CardText={
                   'Users buy, share, and resell internet services as an NFT'
                 }
-                CardImage={'assets/nftIcon.svg'}
+                CardImage={process.env.PUBLIC_URL+ '/assets/nftIcon.svg'}
               />
             </div>
             <div className="nftWidgets">
@@ -34,13 +34,13 @@ function NFTsandOwnership() {
                 CardText={
                   'Affordable, decentralized mesh internet for everyone'
                 }
-                CardImage={'assets/chainIcon.svg'}
+                CardImage={process.env.PUBLIC_URL+ '/assets/chainIcon.svg'}
               />
             </div>
             <div className="nftWidgets">
               <FrictionlessCard
                 CardText={'Super fast and stable broadband for businesses'}
-                CardImage={'assets/speedIcon.svg'}
+                CardImage={process.env.PUBLIC_URL+ '/assets/speedIcon.svg'}
               />
             </div>
           </div>

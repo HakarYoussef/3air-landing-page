@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import ReCAPTCHA from 'react-google-recaptcha';
 import Reaptcha from 'reaptcha';
 import './SubscriptionStyles.scss';
 import Container from 'react-bootstrap/esm/Container';
@@ -66,7 +65,6 @@ const Subscription = () => {
   };
 
   const subscribe = async (e) => {
-    console.log('subscribe clicked');
     e.preventDefault();
     setSubmitting(true);
     setNote({
@@ -82,8 +80,6 @@ const Subscription = () => {
       });
       return setSubmitting(false);
     }
-    console.log('correct email type');
-    console.log(recaptchaRef);
     recaptchaRef.current.execute();
   };
   return (

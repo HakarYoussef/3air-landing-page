@@ -40,7 +40,7 @@ function FrictionlessExperience() {
           }}
         >
           <FrictionlessCard
-            CardImage={'assets/hammerIcon.svg'}
+            CardImage={process.env.PUBLIC_URL+ '/assets/hammerIcon.svg'}
             CardText={'No need to dig trenches'}
           />
         </motion.div>
@@ -55,7 +55,7 @@ function FrictionlessExperience() {
           }}
         >
           <FrictionlessCard
-            CardImage={'assets/tvIcon.svg'}
+            CardImage={process.env.PUBLIC_URL+ '/assets/tvIcon.svg'}
             CardText={'Digital TV at home and in the app'}
           />
         </motion.div>
@@ -70,7 +70,7 @@ function FrictionlessExperience() {
           }}
         >
           <FrictionlessCard
-            CardImage={'assets/ipTelephoneIcon.svg'}
+            CardImage={process.env.PUBLIC_URL+ '/assets/ipTelephoneIcon.svg'}
             CardText={'IP Telephony to facilitate businesses'}
           />
         </motion.div>
@@ -85,7 +85,7 @@ function FrictionlessExperience() {
           }}
         >
           <FrictionlessCard
-            CardImage={'assets/badgeIcon.svg'}
+            CardImage={process.env.PUBLIC_URL+ '/assets/badgeIcon.svg'}
             CardText={'Stable, reliable and affordable'}
           />
         </motion.div>

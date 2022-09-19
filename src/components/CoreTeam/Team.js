@@ -1,10 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
-import './Team.scss';
-import Container from 'react-bootstrap/Container';
+import { Button, ButtonGroup, Container } from 'react-bootstrap';
 import Slider from 'react-slick';
 import { teamData } from './data';
 import '../MembersProfile/Member.scss';
-import { Button, ButtonGroup } from 'react-bootstrap';
+import './Team.scss';
 
 function Team() {
   const sliderRef = useRef(null);
@@ -68,7 +67,7 @@ function Team() {
               <div className="members">
                 <div className="members-images">
                   <a href={item.link} target="_blank" rel="noopener noreferrer">
-                    <img src={item.img} alt="Profile" />
+                    <img src={process.env.PUBLIC_URL+item.img} alt="Profile" />
                   </a>
 
                   <a
@@ -133,7 +132,7 @@ function Team() {
               >
                 <div className="arrowBtn">
                   <span className="join" />
-                  <img src="assets/prevArrowIcon.svg" alt="arrow" />
+                  <img src={process.env.PUBLIC_URL+ '/assets/prevArrowIcon.svg'} alt="arrow" />
                 </div>
               </Button>
               <Button
@@ -142,7 +141,7 @@ function Team() {
               >
                 <div className="arrowBtn">
                   <span className="join" />
-                  <img src="assets/nextArrowIcon.svg" alt="arrow" />
+                  <img src={process.env.PUBLIC_URL+ '/assets/nextArrowIcon.svg'} alt="arrow" />
                 </div>
               </Button>
             </ButtonGroup>

@@ -1,8 +1,8 @@
 import React from 'react';
-import './DigitalStyles.scss';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/esm/Container';
 import { motion } from 'framer-motion';
+import './DigitalStyles.scss';
 
 function DigitalCard({ CardImage, CardText }) {
   return (
