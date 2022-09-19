@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/3air-landing-page/static/css/main.268edc56.css",
-    "main.js": "/3air-landing-page/static/js/main.46649fd8.js",
+    "main.css": "/3air-landing-page/static/css/main.84f8881b.css",
+    "main.js": "/3air-landing-page/static/js/main.05721f7a.js",
     "static/js/787.28cb0dcd.chunk.js": "/3air-landing-page/static/js/787.28cb0dcd.chunk.js",
     "static/media/architecture.svg": "/3air-landing-page/static/media/architecture.ac211771862c66aff866.svg",
     "static/media/diagram2.svg": "/3air-landing-page/static/media/diagram2.40a01dc3bbbd93732281.svg",
@@ -13,12 +13,12 @@
     "static/media/slick.ttf": "/3air-landing-page/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/3air-landing-page/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/3air-landing-page/index.html",
-    "main.268edc56.css.map": "/3air-landing-page/static/css/main.268edc56.css.map",
-    "main.46649fd8.js.map": "/3air-landing-page/static/js/main.46649fd8.js.map",
+    "main.84f8881b.css.map": "/3air-landing-page/static/css/main.84f8881b.css.map",
+    "main.05721f7a.js.map": "/3air-landing-page/static/js/main.05721f7a.js.map",
     "787.28cb0dcd.chunk.js.map": "/3air-landing-page/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.268edc56.css",
-    "static/js/main.46649fd8.js"
+    "static/css/main.84f8881b.css",
+    "static/js/main.05721f7a.js"
   ]
 }
