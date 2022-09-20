@@ -63,6 +63,7 @@
 
 .wheretobuySectionRight > img {
   float: right;
+  margin: 20px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -78,10 +79,8 @@
   .wheretobuySectionRight > img {
     width: 100%;
     height: 100%;
-  }
-
-  .wheretobuySectionRight > img {
     float: right;
+    margin: 20px;
   }
 }
 
@@ -104,6 +103,7 @@
     width: 80%;
     height: 80%;
     float: none;
+    margin: auto;
   }
     
   .wheretobuyContainer {

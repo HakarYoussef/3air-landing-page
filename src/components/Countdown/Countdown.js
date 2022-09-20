@@ -10,7 +10,7 @@ const Countdown = () => {
     dateValue: '',
     timeValue: '',
     ampmValue: 'am',
-    unixEndDate: moment("2022-09-22 23:59:59").format('X')
+    unixEndDate: [2022, 8, 22, 10, 0, 0, 0]
   };
   const initialCountdownTimer = {
     days: '',
@@ -24,16 +24,16 @@ const Countdown = () => {
   const [countdownInfoMessage, setCountdownInfoMessage] = useState('');
 
   const playTimer = useCallback((currentUnixEndDate) => {
-    const distance = currentUnixEndDate - moment().format('X');
+    const distance = moment.duration(moment.utc(currentUnixEndDate) - moment());
 
-    if (distance > 0) {
+    if (distance.as('seconds') > 0) {
       setCountdownTimer(prevCountdownTimer => {
         return {
           ...prevCountdownTimer,
-          days: parseInt(distance / (60 * 60 * 24), 10),
-          hours: parseInt(distance % (60 * 60 * 24) / (60 * 60), 10),
-          mins: parseInt(distance % (60 * 60) / (60), 10),
-          secs: parseInt(distance % 60, 10)
+          days: distance.get('days'),
+          hours: distance.get('hours'),
+          mins: distance.get('minutes'),
+          secs: distance.get('seconds')
         };
       });
       setCountdownInfoMessage('');

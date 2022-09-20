@@ -55,7 +55,7 @@ function WhereToBuy() {
         </Container>
       </div>
       <div className="wheretobuySectionRight">
-        <img src={process.env.PUBLIC_URL + '/assets/WhereToBuy.png'} alt="SOLV PROTOCOL"/>
+        <img src={process.env.PUBLIC_URL + '/assets/WhereToBuy.svg'} alt="SOLV PROTOCOL"/>
       </div>
     </Container>
   );
