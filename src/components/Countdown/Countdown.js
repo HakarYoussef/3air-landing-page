@@ -10,7 +10,7 @@ const Countdown = () => {
     dateValue: '',
     timeValue: '',
     ampmValue: 'am',
-    unixEndDate: [2022, 8, 22, 10, 0, 0, 0]
+    unixEndDate: Date.UTC(2022, 8, 22, 10, 0, 0)//[2022, 8, 22, 10, 0, 0, 0]
   };
   const initialCountdownTimer = {
     days: '',
@@ -24,16 +24,19 @@ const Countdown = () => {
   const [countdownInfoMessage, setCountdownInfoMessage] = useState('');
 
   const playTimer = useCallback((currentUnixEndDate) => {
-    const distance = moment.duration(moment.utc(currentUnixEndDate) - moment());
+    // const distance = moment.duration(moment.utc(currentUnixEndDate) - moment("YYYY-MM-DD HH:mm:ss"));
+    const distance = (currentUnixEndDate - Date.now()) / 1000;
 
-    if (distance.as('seconds') > 0) {
+    console.log(distance);
+
+    if (distance > 0) {
       setCountdownTimer(prevCountdownTimer => {
         return {
           ...prevCountdownTimer,
-          days: distance.get('days'),
-          hours: distance.get('hours'),
-          mins: distance.get('minutes'),
-          secs: distance.get('seconds')
+          days: parseInt(distance / (60 * 60 * 24), 10),
+          hours: parseInt(distance % (60 * 60 * 24) / (60 * 60), 10),
+          mins: parseInt(distance % (60 * 60) / (60), 10),
+          secs: parseInt(distance % 60, 10)
         };
       });
       setCountdownInfoMessage('');
