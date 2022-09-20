@@ -28,8 +28,6 @@ const Countdown = () => {
     const distance = (currentUnixEndDate - Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 
                                                     now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds())) / 1000;
 
-    console.log(distance);
-
     if (distance > 0) {
       setCountdownTimer(prevCountdownTimer => {
         return {
