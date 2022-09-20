@@ -10,7 +10,7 @@ const Countdown = () => {
     dateValue: '',
     timeValue: '',
     ampmValue: 'am',
-    unixEndDate: Date.UTC(2022, 8, 22, 10, 0, 0)//[2022, 8, 22, 10, 0, 0, 0]
+    unixEndDate: new Date(2022, 8, 22, 10, 0, 0)//[2022, 8, 22, 10, 0, 0, 0]
   };
   const initialCountdownTimer = {
     days: '',
@@ -25,8 +25,9 @@ const Countdown = () => {
 
   const playTimer = useCallback((currentUnixEndDate) => {
     const now = new Date;
-    const distance = (currentUnixEndDate - Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 
-                                                    now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds())) / 1000;
+    // const distance = (currentUnixEndDate - Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 
+    //                                                 now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds())) / 1000;
+    const distance = (currentUnixEndDate - now) / 1000;
 
     if (distance > 0) {
       setCountdownTimer(prevCountdownTimer => {
