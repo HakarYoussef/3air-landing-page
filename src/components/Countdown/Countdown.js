@@ -10,7 +10,7 @@ const Countdown = () => {
     dateValue: '',
     timeValue: '',
     ampmValue: 'am',
-    unixEndDate: new Date(2022, 8, 22, 10, 0, 0)//[2022, 8, 22, 10, 0, 0, 0]
+    unixEndDate: Date.UTC(2022, 8, 22, 10, 0, 0)
   };
   const initialCountdownTimer = {
     days: '',
@@ -21,13 +21,14 @@ const Countdown = () => {
 
   const [countdownSettings, setCountdownSettings] = useState(JSON.parse(localStorage.getItem('countdownDate')) || { ...initialCountdownSettings });
   const [countdownTimer, setCountdownTimer] = useState({ ...initialCountdownTimer });
-  const [countdownInfoMessage, setCountdownInfoMessage] = useState('');
 
-  const playTimer = useCallback((currentUnixEndDate) => {
-    const now = new Date;
-    // const distance = (currentUnixEndDate - Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 
-    //                                                 now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds())) / 1000;
-    const distance = (currentUnixEndDate - now) / 1000;
+  const playTimer = (currentUnixEndDate) => {
+    const now = new Date();
+
+    console.log("Now ", now);
+    console.log("Limit ", currentUnixEndDate);
+
+    const distance = currentUnixEndDate - now / 1000;
 
     if (distance > 0) {
       setCountdownTimer(prevCountdownTimer => {
@@ -39,20 +40,20 @@ const Countdown = () => {
           secs: parseInt(distance % 60, 10)
         };
       });
-      setCountdownInfoMessage('');
     }
     else {
-      setCountdownInfoMessage('Project launched!');
-      setCountdownSettings({ ...initialCountdownSettings });
+      setCountdownSettings({ ...initialCountdownSettings, unixEndDate: null });
       setCountdownTimer({ ...initialCountdownTimer });
     }
-  }, []);
+  };
 
   useEffect(() => {
     let timer = null;
-
+    
     if (countdownSettings.unixEndDate) {
-      timer = setInterval(() => playTimer(countdownSettings.unixEndDate), 1000);
+      timer = setInterval(() => { 
+        playTimer(countdownSettings.unixEndDate);}
+        , 1000);
     }
     localStorage.setItem('countdownDate', JSON.stringify(countdownSettings));
 
@@ -62,11 +63,16 @@ const Countdown = () => {
     }
   }, []);
 
-  return (
-    <div className="countdown">
-      {countdownSettings.unixEndDate ? <CountdownTimer countdownTimer={countdownTimer} unixEndDate={countdownSettings.unixEndDate} /> : <InfoMessage countdownInfoMessage={countdownInfoMessage} />}
-    </div>
-  );
+  return countdownSettings.unixEndDate ? (
+      <div className="countdown">
+        <CountdownTimer countdownTimer={countdownTimer} unixEndDate={countdownSettings.unixEndDate} />
+      </div>
+    ) :
+    (
+      <>
+      </>
+    )
+  ;
 }
 
 export default Countdown;
