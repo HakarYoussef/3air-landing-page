@@ -24,8 +24,9 @@ const Countdown = () => {
   const [countdownInfoMessage, setCountdownInfoMessage] = useState('');
 
   const playTimer = useCallback((currentUnixEndDate) => {
-    // const distance = moment.duration(moment.utc(currentUnixEndDate) - moment("YYYY-MM-DD HH:mm:ss"));
-    const distance = (currentUnixEndDate - Date.now()) / 1000;
+    const now = new Date;
+    const distance = (currentUnixEndDate - Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 
+                                                    now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds())) / 1000;
 
     console.log(distance);
 
