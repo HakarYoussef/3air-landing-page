@@ -15,20 +15,23 @@ function WhereToBuy() {
   return (
     <Container className="wheretobuyContainer">
       <div className="wheretobuySectionLeft">
-        <Container>
+        <Container className="wheretobuySubSectionLeft">
           <h2 className="wheretobuyTitle">Where To Buy</h2>
           <p className="wheretobuyPara">
             Want some 3AIR at presale prices?
             <br/>
-            There's a voucher up on <a href="https://solv.finance/" target="_blank" class="solvFinance" rel="noreferrer">Solv.finance</a>
+            There's a voucher up on <a href="https://solv.finance/" target="_blank" className="solvFinance" rel="noreferrer">Solv.finance</a>
           </p>
           {
             width > 767 ? (
-              <p className="wheretobuyCheckList">
-                <FaCheckCircle />&nbsp;No whitelisting&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <FaCheckCircle />&nbsp;No KYC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <FaCheckCircle />&nbsp;No minimum
-              </p>
+              <>
+                <div className="wheretobuyCheckList">
+                  <FaCheckCircle />&nbsp;No whitelisting&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <FaCheckCircle />&nbsp;No KYC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <FaCheckCircle />&nbsp;No minimum
+                </div>
+                <p></p>
+              </>
             ) : (
               <>
                 <p className="wheretobuyCheckList">
