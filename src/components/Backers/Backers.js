@@ -27,6 +27,8 @@ function Backers() {
 
           <img height={36} src={process.env.PUBLIC_URL+'/assets/capital.svg'} alt="Backers" />
 
+          <img height={42} src={process.env.PUBLIC_URL+'/assets/helion.svg'} alt="Backers" />
+
           <img height={42} src={process.env.PUBLIC_URL+'/assets/cvvc.png'} alt="Backers" />
         </Container>
       </Container>
