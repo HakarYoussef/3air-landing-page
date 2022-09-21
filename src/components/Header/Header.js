@@ -38,11 +38,13 @@ export default function Header() {
     days: '',
     hours: '',
     minutes: '',
-    seconds: ''
+    seconds: '',
   };
 
   const [countdownSettings, setCountdownSettings] = useState(unixEndDate);
-  const [countdownTimer, setCountdownTimer] = useState({ ...initialCountdownTimer });
+  const [countdownTimer, setCountdownTimer] = useState({
+    ...initialCountdownTimer,
+  });
 
   const playTimer = () => {
     const now = new Date();
@@ -50,59 +52,80 @@ export default function Header() {
     const distance = (countdownSettings - now) / 1000;
 
     if (distance > 0) {
-      setCountdownTimer(prevCountdownTimer => {
+      setCountdownTimer((prevCountdownTimer) => {
         return {
           ...prevCountdownTimer,
           days: parseInt(distance / (60 * 60 * 24), 10),
-          hours: parseInt(distance % (60 * 60 * 24) / (60 * 60), 10),
-          mins: parseInt(distance % (60 * 60) / (60), 10),
-          secs: parseInt(distance % 60, 10)
+          hours: parseInt((distance % (60 * 60 * 24)) / (60 * 60), 10),
+          mins: parseInt((distance % (60 * 60)) / 60, 10),
+          secs: parseInt(distance % 60, 10),
         };
       });
-    }
-    else {
-      setCountdownSettings( null );
+    } else {
+      setCountdownSettings(null);
       setCountdownTimer({ ...initialCountdownTimer });
     }
   };
 
   useEffect(() => {
     let timer = null;
-    
+
     if (unixEndDate) {
-      timer = setInterval(() => { 
-        playTimer(unixEndDate);}
-        , 1000);
+      timer = setInterval(() => {
+        playTimer(unixEndDate);
+      }, 1000);
     }
 
     return () => {
       clearInterval(timer);
       timer = null;
-    }
+    };
   }, []);
 
   return (
     <Navbar
-      className={fix ? (unixEndDate > new Date() && countdownSettings ? 'headerWrapperFixed' : 'headerWrapperFixed headerWrapperMove')
-                      : (unixEndDate > new Date() && countdownSettings ? 'headerWrapper' : 'headerWrapper headerWrapperMove')}
+      className={
+        fix
+          ? unixEndDate > new Date() && countdownSettings
+            ? 'headerWrapperFixed'
+            : 'headerWrapperFixed headerWrapperMove'
+          : unixEndDate > new Date() && countdownSettings
+          ? 'headerWrapper'
+          : 'headerWrapper headerWrapperMove'
+      }
       expand="lg"
     >
-      <div className={ unixEndDate > new Date() && countdownSettings ? "countdown" : "countdownHidden" }>
-        <CountdownTimer countdownTimer={countdownTimer} unixEndDate={countdownSettings} />
+      <div
+        className={
+          unixEndDate > new Date() && countdownSettings
+            ? 'countdown'
+            : 'countdownHidden'
+        }
+      >
+        <CountdownTimer
+          countdownTimer={countdownTimer}
+          unixEndDate={countdownSettings}
+        />
       </div>
-      <Container className={unixEndDate > new Date() && countdownSettings ? "header" : "header headerMove"}>
+      <Container
+        className={
+          unixEndDate > new Date() && countdownSettings
+            ? 'header'
+            : 'header headerMove'
+        }
+      >
         <Navbar.Brand href="#">
           {fix ? (
             <Image
               className="header-brand"
-              src={process.env.PUBLIC_URL+'/assets/airLogoWhite.svg'}
+              src={process.env.PUBLIC_URL + '/assets/airLogoWhite.svg'}
               height={'38px'}
               width={'94px'}
             />
           ) : (
             <Image
               className="header-brand"
-              src={process.env.PUBLIC_URL+'/assets/Logo.svg'}
+              src={process.env.PUBLIC_URL + '/assets/Logo.svg'}
               height={'48px'}
               width={'114px'}
             />
@@ -111,8 +134,15 @@ export default function Header() {
         <div className="nav-items">
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
           <div
-            className={fix ? (unixEndDate > new Date() &&countdownSettings ? 'burger-menu-fixed' : 'burger-menu-fixed burget-menu-move')
-                            : (unixEndDate > new Date() && countdownSettings ? 'burger-menu' : 'burger-menu burget-menu-move')}
+            className={
+              fix
+                ? unixEndDate > new Date() && countdownSettings
+                  ? 'burger-menu-fixed'
+                  : 'burger-menu-fixed burget-menu-move'
+                : unixEndDate > new Date() && countdownSettings
+                ? 'burger-menu'
+                : 'burger-menu burget-menu-move'
+            }
             onClick={updateMenu}
           >
             <div className={burger_class}></div>
@@ -154,7 +184,7 @@ export default function Header() {
             >
               Staking
             </Nav.Link>
-            <Nav.Link onClick={updateMenu} href="#footer">
+            <Nav.Link onClick={updateMenu} href="#subscribe">
               Contact
             </Nav.Link>
           </Nav>
