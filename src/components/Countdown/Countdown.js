@@ -1,17 +1,9 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import moment from 'moment';
+import React, { useState, useEffect } from 'react';
 import CountdownTimer from './CountdownTimer';
-import InfoMessage from './InfoMessage';
 import './Countdown.scss';
 
 const Countdown = () => {
-  const initialCountdownSettings = {
-    eventNameValue: '',
-    dateValue: '',
-    timeValue: '',
-    ampmValue: 'am',
-    unixEndDate: Date.UTC(2022, 8, 22, 10, 0, 0)
-  };
+  const unixEndDate = new Date(Date.UTC(2022, 8, 22, 10, 0, 0));
   const initialCountdownTimer = {
     days: '',
     hours: '',
@@ -19,16 +11,13 @@ const Countdown = () => {
     seconds: ''
   };
 
-  const [countdownSettings, setCountdownSettings] = useState(JSON.parse(localStorage.getItem('countdownDate')) || { ...initialCountdownSettings });
+  const [countdownSettings, setCountdownSettings] = useState(unixEndDate);
   const [countdownTimer, setCountdownTimer] = useState({ ...initialCountdownTimer });
 
-  const playTimer = (currentUnixEndDate) => {
+  const playTimer = () => {
     const now = new Date();
 
-    console.log("Now ", now);
-    console.log("Limit ", currentUnixEndDate);
-
-    const distance = currentUnixEndDate - now / 1000;
+    const distance = (countdownSettings - now) / 1000;
 
     if (distance > 0) {
       setCountdownTimer(prevCountdownTimer => {
@@ -42,7 +31,7 @@ const Countdown = () => {
       });
     }
     else {
-      setCountdownSettings({ ...initialCountdownSettings, unixEndDate: null });
+      setCountdownSettings( null );
       setCountdownTimer({ ...initialCountdownTimer });
     }
   };
@@ -50,12 +39,11 @@ const Countdown = () => {
   useEffect(() => {
     let timer = null;
     
-    if (countdownSettings.unixEndDate) {
+    if (unixEndDate) {
       timer = setInterval(() => { 
-        playTimer(countdownSettings.unixEndDate);}
+        playTimer(unixEndDate);}
         , 1000);
     }
-    localStorage.setItem('countdownDate', JSON.stringify(countdownSettings));
 
     return () => {
       clearInterval(timer);
@@ -63,14 +51,14 @@ const Countdown = () => {
     }
   }, []);
 
-  return countdownSettings.unixEndDate ? (
+  return countdownSettings ? (
       <div className="countdown">
         <CountdownTimer countdownTimer={countdownTimer} unixEndDate={countdownSettings.unixEndDate} />
       </div>
     ) :
     (
-      <>
-      </>
+      <div className="countdownHidden">
+      </div>
     )
   ;
 }
