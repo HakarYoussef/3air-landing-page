@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "3air",
+  "name": "Connectivity and Banking for the Next Billion",
   "icons": [
     {
       "src": "favicon.png",
@@ -8,18 +8,18 @@
       "type": "image/png"
     },
     {
-      "src": "assets/Logo.png",
-      "type": "image/png",
+      "src": "logo.svg",
+      "type": "image/svg",
       "sizes": "115x48"
     },
     {
-      "src": "assets/Logo.png",
-      "type": "image/png",
+      "src": "logo.svg",
+      "type": "image/svg",
       "sizes": "115x48"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#e71463",
   "background_color": "#ffffff"
 }
