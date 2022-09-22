@@ -9,7 +9,7 @@
     },
     {
       "src": "assets/Logo.svg",
-      "type": "image/png",
+      "type": "image/svg+xml",
       "sizes": "any"
     }
   ],
