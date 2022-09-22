@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "3AIR",
+  "name": "3AIR APP",
   "icons": [
     {
       "src": "favicon.png",
@@ -8,14 +8,9 @@
       "type": "image/png"
     },
     {
-      "src": "assets/Logo.png",
+      "src": "assets/Logo.svg",
       "type": "image/png",
-      "sizes": "115x48"
-    },
-    {
-      "src": "assets/Logo.png",
-      "type": "image/png",
-      "sizes": "115x48"
+      "sizes": "any"
     }
   ],
   "start_url": ".",
