@@ -137,7 +137,7 @@ export default function Header() {
               href="https://docs.3air.io/tokenomics/3air-tokenomics/"
               target={'_blank'}
             >
-              Tokenomics
+              Token
             </Nav.Link>
             <Nav.Link
               target={'_blank'}
@@ -150,7 +150,7 @@ export default function Header() {
             <Nav.Link
               onClick={updateMenu}
               target="_blank"
-              href="https://blog.3air.io/early-staking-pools/"
+              href="https://app.3air.io/"
             >
               Staking
             </Nav.Link>

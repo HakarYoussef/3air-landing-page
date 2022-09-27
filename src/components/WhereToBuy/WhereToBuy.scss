@@ -15,95 +15,74 @@
   height: 80%;
 }
 
-.wheretobuyTitle {
+.wheretobuyTitleLeft, .wheretobuyTitleRight {
   color: white;
   font-weight: 800;
   font-size: 36px;
+  margin-top: 25px;
 }
 
-.wheretobuySectionLeft {
-  justify-content: left;
-  text-align: left;
+.wheretobuySectionLeft, .wheretobuySectionRight {
+  justify-content: center;
+  text-align: center;
   width: 50%;
+  margin: auto;
 }
 
-.wheretobuySubSectionLeft {
+.wheretobuyContainer > div > div > a {
+  padding: 20px;
+}
+
+.wheretobuySubSectionLeft, .wheretobuySubSectionRight {
   width: fit-content;
-  float: left;
-  margin: 25px;
+  float: center;
+  margin: auto;
 }
 
-.wheretobuyPara {
-  color: white;
-}
-
-.wheretobuyPara .solvFinance {
-  color: #84ecef;
-}
-
-.wheretobuyCheckList {
-  justify-content: left;
-  align-items: center;
-  text-align: left;
-  display: flex;
-}
-
-.wheretobuyGetithere {
-  color: black;
-  background-color: #84ecef;
-  width: 136px;
-  height: 42px;
-  border-radius: 50px;
-  border: none;
-}
-
-.wheretobuySectionRight {
-  width: 50%;
-}
-
-.wheretobuySectionRight > img {
-  float: right;
-  margin: 20px;
+.wheretobuyContainer > div > div > a > img {
+  margin: 15px;
 }
 
 @media only screen and (max-width: 1024px) {
-  .wheretobuySectionLeft {
-    justify-content: left;
-    text-align: left;
+  .wheretobuySectionLeft, .wheretobuySectionRight {
+    justify-content: center;
+    text-align: center;
   }
 
-  .wheretobuySectionRight {
+  .wheretobuySectionRight, .wheretobuySectionLeft {
     width: 50%;
   }
   
-  .wheretobuySectionRight > img {
+  .wheretobuySectionRight > img, .wheretobuySectionLeft > img {
     width: 100%;
     height: 100%;
-    float: right;
+    float: center;
     margin: 20px;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .wheretobuySectionLeft {
+  .wheretobuySectionLeft, .wheretobuySectionRight {
     margin-right: 0px;
     z-index: 100;
     width: 100%;
+    height: 50%;
   }
 
   .wheretobuySectionRight {
-    margin-left: 0px;
-    opacity: 0.1;
-    z-index: 90;
-    position: absolute;
     width: 100%;
+    height: 50%;
   }
 
-  .wheretobuySectionRight > img {
-    width: 80%;
-    height: 80%;
-    float: none;
+  .wheretobuySectionRight > div > a > img {
     margin: auto;
+    margin-bottom: 15px;
+  }
+
+  .wheretobuySubSectionLeft {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
     
   .wheretobuyContainer {
@@ -111,5 +90,10 @@
     width: auto;
     margin: 10px;
     margin-bottom: 50px;
+    display: block;
+  }
+
+  .wheretobuyTitleRight {
+    margin-bottom: 20px;
   }
 }
